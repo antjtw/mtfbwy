@@ -24,19 +24,20 @@
 }
 
 .site-logo {
-  font-family: var(--font-display);
-  font-size: 20px; /* heading-sm equivalent */
-  /* ITC Serif Gothic Heavy for logo — brand display */
-  font-weight: 700;
-  color: var(--color-text);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
   text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.15s;
 }
 
-.site-logo span {
-  color: var(--color-text-gold);
+.site-logo:hover { opacity: 0.8; }
+
+.site-logo img {
+  display: block;
+  height: 28px;
+  width: auto;
 }
 
 .site-nav {

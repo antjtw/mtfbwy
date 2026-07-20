@@ -2,6 +2,7 @@
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8">
+  <script src="js/gate.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Appendix — MTFBYW</title>
   <link rel="stylesheet" href="css/tokens.css">
@@ -16,7 +17,8 @@
   <aside class="sidebar">
     <div class="sidebar-group">
       <span class="sidebar-label">Reference</span>
-      <a href="#languages"    class="sidebar-link">Languages</a>
+      <a href="#languages"    class="sidebar-link">Languages (Core)</a>
+      <a href="#languages-expanded" class="sidebar-link">Languages (Expanded)</a>
       <a href="#companions"   class="sidebar-link">Companions</a>
       <a href="#equipment"    class="sidebar-link">Equipment</a>
       <a href="#inventory"    class="sidebar-link">Inventory &amp; Burden</a>
@@ -46,48 +48,121 @@
     <!-- Languages -->
     <section id="languages" class="rule-section">
       <h2 class="section-title">Languages</h2>
+      <p>A collection of languages, tongues, and means of communication from a galaxy far, far away. When you gain a language from your Species, Origin, or Career, choose from the lists below. Languages marked with a source badge require GM approval if expanded content is in play.</p>
 
-      <div class="grid-2">
-        <div class="card card--feature">
-          <div class="card__title">Galactic Basic</div>
-          <span class="badge badge--core" style="margin-bottom:var(--space-2);display:inline-block;">Core Rules</span>
-          <p>Known as Standard Galactic Basic, or Galactic Standard — the most prevalent language in the galaxy, with a number of different dialects and accents.</p>
-          <p>If you speak or understand Galactic Basic, you can read and understand the <strong>Aurebesh</strong>, <strong>High Galactic</strong>, and <strong>Outer Rim Basic</strong> scripts.</p>
-        </div>
-        <div class="card card--feature">
-          <div class="card__title">Binary</div>
-          <span class="badge badge--core" style="margin-bottom:var(--space-2);display:inline-block;">Core Rules</span>
-          <p>Also known as droidspeak or astromech — the language commonly spoken by droids. It consists of beeps and whistles strung together into what resembles sentences. Binary often needs to be translated for organics via computer systems, though some individuals can understand it natively.</p>
-        </div>
-        <div class="card card--feature">
-          <div class="card__title">Huttese</div>
-          <span class="badge badge--core" style="margin-bottom:var(--space-2);display:inline-block;">Core Rules</span>
-          <p>A language often spoken on Hutt-controlled worlds, originating from the Hutt species. Also a widespread trade language. Huttese shares structural similarities to Aqualish and Rodian, so a speaker may infer meaning from any of these languages.</p>
-        </div>
-        <div class="card card--feature">
-          <div class="card__title">Rodian</div>
-          <span class="badge badge--core" style="margin-bottom:var(--space-2);display:inline-block;">Core Rules</span>
-          <p>Also known as Rodese — a language spoken by members of the Rodian species. Shares structural similarities to Huttese and Aqualish, so a speaker may infer meaning from any of these languages.</p>
-        </div>
-        <div class="card card--feature">
-          <div class="card__title">Shyriiwook</div>
-          <span class="badge badge--core" style="margin-bottom:var(--space-2);display:inline-block;">Core Rules</span>
-          <p>The language of the Wookiees. It consists of growling and howls — difficult for anyone not a Wookiee to speak or learn. It has over one hundred and fifty words for wood, and many words for bloodshed. Those who understand Shyriiwook may also read Wookiee Script.</p>
-        </div>
-        <div class="card card--feature">
-          <div class="card__title">Twi'leki (Ryl)</div>
-          <span class="badge badge--core" style="margin-bottom:var(--space-2);display:inline-block;">Core Rules</span>
-          <p>A language spoken by Twi'leks from Ryloth. It combines verbal sounds and an elaborate sign language using the Twi'lek's lekku. That sign language allows the Twi'leks to communicate complete concepts without speaking a single word. Species without head-tails may only be able to commune in verbal Twi'leki.</p>
-        </div>
-        <div class="card">
-          <div class="card__title">Low Core Basic</div>
-          <span class="badge badge--sourcebook" style="margin-bottom:var(--space-2);display:inline-block;">Galactic Antiquities</span>
-          <p>A form of Basic that uses a different script entirely, and cannot be interpreted by speakers of Galactic Basic.</p>
+      <div class="callout callout--tip" style="margin-bottom:var(--space-6);">
+        <div class="callout__icon">🗣️</div>
+        <div class="callout__body">
+          <div class="callout__title">Languages and literacy</div>
+          <p>Speaking a language and reading its script are two separate things. Each entry notes which scripts a speaker gains access to, if any. Some species can understand a language but not speak it — this is noted in their species entry.</p>
         </div>
       </div>
+
+      <h3 style="font-size:var(--text-xl);font-weight:900;color:var(--color-text);margin-bottom:var(--space-4);">Core Languages</h3>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Galactic Basic <span style="font-size:11px;font-weight:400;color:var(--color-text-muted);font-family:var(--font-body);text-transform:none;letter-spacing:0;">also: Standard Galactic Basic · Galactic Standard</span></div>
+        <p>The most prevalent language in the galaxy, represented with a number of different dialects and accents. Speakers can read and understand the <strong>Aurebesh</strong>, <strong>High Galactic</strong>, and <strong>Outer Rim Basic</strong> scripts.</p>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Huttese</div>
+        <p>A language often spoken on Hutt-controlled worlds, originating from the Hutt species. Huttese was also a widespread trade language. It contains structural similarities to <strong>Aqualish</strong> and <strong>Rodian</strong>, so that a speaker may <em>infer meaning</em> from either of those languages.</p>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Shyriiwook</div>
+        <p>The language of the Wookiees. Consisting of growling and howls, it is difficult for anyone not a Wookiee to speak or learn. It has over one-hundred-and-fifty words for wood, and many words for bloodshed. Speakers may also read <strong>Wookiee Script</strong>.</p>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Binary <span style="font-size:11px;font-weight:400;color:var(--color-text-muted);font-family:var(--font-body);text-transform:none;letter-spacing:0;">also: droidspeak · astromech</span></div>
+        <p>The language commonly spoken by droids. It consists of beeps and whistles strung together into what resemble sentences. Binary often needs translating for organics, though some are able to understand it without one.</p>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Twi'leki <span style="font-size:11px;font-weight:400;color:var(--color-text-muted);font-family:var(--font-body);text-transform:none;letter-spacing:0;">also: Ryl</span></div>
+        <p>Spoken by Twi'leks from Ryloth, combining <strong>verbal sounds</strong> and an <strong>elaborate sign language</strong> using the Twi'lek's head-tails, called lekku. The sign language allows Twi'leks to communicate complete concepts without pronouncing a single word. Other species without head-tails may only commune in verbal Twi'leki.</p>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Rodian <span style="font-size:11px;font-weight:400;color:var(--color-text-muted);font-family:var(--font-body);text-transform:none;letter-spacing:0;">also: Rodese</span></div>
+        <p>Spoken by the Rodian species. Contains structural similarities to <strong>Huttese</strong> and <strong>Aqualish</strong>, so that a speaker may <em>infer meaning</em> from either of those languages.</p>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Bith</div>
+        <p>A precise and richly layered language native to Clak'dor VII. Famous for the sheer number of words it contains for sound, tone, and music — a Bith speaker can distinguish between dozens of tonal qualities that most species hear as identical. Widely used in scientific and musical circles. Speakers can also read <strong>Bith script</strong>, an angular notation system used for both written records and musical compositions.</p>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Cerean</div>
+        <p>The slow, measured tongue of the Cereans of Cerea. Native speakers are known for their deliberate pacing and long, multi-clause sentences — a reflection of the binary brain processing each thought along two parallel lines. Cerean is rarely heard off-world, as most Cereans prefer to speak Galactic Basic out of courtesy when abroad.</p>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Ghor <span style="font-size:11px;font-weight:400;color:var(--color-text-muted);font-family:var(--font-body);text-transform:none;letter-spacing:0;">spoken by the Ghorman people</span></div>
+        <p>A proud and lyrical language traditionally written in two paired scripts: <strong>Ghorelle</strong> (also called High Ghor), used in formal and ceremonial writing; and <strong>Dixian</strong> (Low Ghor), used in everyday correspondence and trade. Ghormans often greet visitors in Ghor first, switching to Galactic Basic only once respect has been shown. Speakers can read and write in both scripts.</p>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Pheromonal Communication <span style="font-size:11px;font-weight:400;color:var(--color-text-muted);font-family:var(--font-body);text-transform:none;letter-spacing:0;">Rodian species</span></div>
+        <p>Used by the Rodian species alongside their spoken tongue. Conveys mood, intent, and warning through scent rather than sound. A Rodian's pheromones can carry meaning across a crowded room without a word being spoken — though only those with the right olfactory senses, typically other Rodians, can read them clearly.</p>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Pkorian</div>
+        <p>The fluid, bird-like tongue of the Pkorians of Pkori, a hidden world in Wild Space. Rich with trills, clicks, and rapid pitch shifts — a reflection of the dense forests the species evolved within, where carrying clearly through the canopy mattered more than carrying loudly. Few off-worlders have heard Pkorian before the species began leaving home; fewer still have learned to speak it.</p>
+      </div>
+
+      <hr style="margin:var(--space-8) 0;">
+
+      <h3 id="languages-expanded" style="font-size:var(--text-xl);font-weight:900;color:var(--color-text);margin-bottom:var(--space-2);">Expanded Languages</h3>
+      <div class="callout callout--tip" style="margin-bottom:var(--space-6);">
+        <div class="callout__icon">📖</div>
+        <div class="callout__body">
+          <div class="callout__title">Sourcebook content</div>
+          <p>These languages are drawn from supplemental sourcebooks. Each entry notes its source. Confirm with your GM whether expanded content is in use at your table.</p>
+        </div>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Low Core Basic <span class="badge badge--sourcebook" style="vertical-align:middle;">Luthen Rael's Galactic Antiquities</span></div>
+        <p>A form of Basic that uses a different script entirely, and cannot be interpreted by speakers of Galactic Basic.</p>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Aqualish <span class="badge badge--sourcebook" style="vertical-align:middle;">Allies &amp; Adversaries</span></div>
+        <p>The native tongue of the Aqualish of Ando — a guttural language thick with low rolling consonants and slow, deliberate vowels. Contains structural similarities to <strong>Huttese</strong> and <strong>Rodian</strong>, so that a speaker may infer meaning from either. The three Aqualish subspecies — <strong>Aquala</strong>, <strong>Quara</strong>, and <strong>Ualaq</strong> — each carry distinct regional accents, and most Aqualish can place another's home district within a few words.</p>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Barabel <span class="badge badge--sourcebook" style="vertical-align:middle;">Allies &amp; Adversaries</span></div>
+        <p>A hissing, clicking tongue spoken by the saurian Barabel of Barab. Makes heavy use of low sibilants and throat rasps that most humanoid species cannot reproduce without injury. Speakers tend to bare their needle-sharp teeth as a natural part of speech, which other species often misread as a threat display. Those who understand Barabel can also read the rough, glyph-based hunting marks the Barabel leave on rocks and tree-trunks.</p>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Evereni <span class="badge badge--sourcebook" style="vertical-align:middle;">Beyond the Stormwall</span></div>
+        <p>The native tongue of the slate-grey Evereni, scattered across the galaxy after the storms that destroyed Everon five centuries ago. Evereni has no single dialect — exile and survival have splintered the language into dozens of regional forms, each shaped by the worlds the Evereni have passed through. Two Evereni meeting for the first time will often spend their opening exchange testing one another's accents, finding common ground before any business is done.</p>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Poobian <span class="badge badge--sourcebook" style="vertical-align:middle;">Beyond the Stormwall</span></div>
+        <p>The booming, deep-throated tongue of the Pooba of Myllnaab. Makes use of resonant chest tones and rumbling pitch shifts that no smaller-throated species can reproduce. Pooba can understand Galactic Basic perfectly well, but the shape of their vocal apparatus prevents them from speaking it. A Pooba abroad in the galaxy is therefore often heard speaking Poobian, while answering questions put to them in Basic.</p>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Tynnan <span class="badge badge--sourcebook" style="vertical-align:middle;">Beyond the Stormwall</span></div>
+        <p>The whistling, chittering tongue of the Tynnan of Tynna. Rich in scent-based and whisker-based modifiers that subtly alter the meaning of spoken words — modifiers that other species can neither sense nor learn. Tynnans can understand Galactic Basic but cannot pronounce it cleanly, and are often heard speaking their own language while listening attentively in another.</p>
+      </div>
+
+      <div class="feature-block">
+        <div class="feature-block__name">Vintian <span class="badge badge--sourcebook" style="vertical-align:middle;">Beyond the Stormwall</span></div>
+        <p>The slow, grinding tongue of the Vintians of Vint. Spoken at frequencies and with mineral resonances that no fleshy mouth can reproduce — to most species, a Vintian conversation sounds like distant rocks settling in the dark. Vintians can understand Galactic Basic but cannot pronounce a word of it. Skilled translators sometimes use vibration-sensitive rigs to capture the lower registers of Vintian speech.</p>
+      </div>
+
     </section>
 
-    <!-- Companions -->
     <section id="companions" class="rule-section">
       <h2 class="section-title">Companions</h2>
       <p>Heroes often journey with loyal droids, cunning creatures, or enigmatic entities. Companions support the Hero without overshadowing them. They scout, slice, heal, distract, bolster, or simply add heart and narrative weight.</p>

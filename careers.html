@@ -2,32 +2,18 @@
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8">
+  <script src="js/gate.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Careers &amp; Origins — MTFBYW</title>
+  <title>Careers — MTFBYW</title>
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
-
 <div id="site-header-mount"></div>
-
 <div class="page-wrap">
-
   <aside class="sidebar">
     <div class="sidebar-group">
-      <span class="sidebar-label">Origins</span>
-      <a href="#abandoned"       class="sidebar-link">Abandoned</a>
-      <a href="#force-sensitive" class="sidebar-link">Force Sensitive</a>
-      <a href="#hardened"        class="sidebar-link">Hardened</a>
-      <a href="#jedi-initiate"   class="sidebar-link">Jedi Initiate</a>
-      <a href="#optimist"        class="sidebar-link">Optimist</a>
-      <a href="#prospect"        class="sidebar-link">Prospect</a>
-      <a href="#survivor"        class="sidebar-link">Survivor</a>
-      <a href="#tribal"          class="sidebar-link">Tribal</a>
-      <a href="#witchborn"       class="sidebar-link">Witchborn</a>
-    </div>
-    <div class="sidebar-group">
-      <span class="sidebar-label">Core Careers</span>
+      <span class="sidebar-label">Core Rules</span>
       <a href="#bounty-hunter"   class="sidebar-link">Bounty Hunter</a>
       <a href="#freedom-fighter" class="sidebar-link">Freedom Fighter</a>
       <a href="#jedi-knight"     class="sidebar-link">Jedi Knight</a>
@@ -36,7 +22,7 @@
       <a href="#smuggler"        class="sidebar-link">Smuggler</a>
     </div>
     <div class="sidebar-group">
-      <span class="sidebar-label">Extended Careers</span>
+      <span class="sidebar-label">Expanded</span>
       <a href="#criminal"        class="sidebar-link">Criminal</a>
       <a href="#dj"              class="sidebar-link">DJ</a>
       <a href="#droidsmith"      class="sidebar-link">Droidsmith</a>
@@ -48,517 +34,292 @@
       <a href="#outlaw"          class="sidebar-link">Outlaw</a>
       <a href="#treasure-hunter" class="sidebar-link">Treasure Hunter</a>
     </div>
+    <div class="sidebar-group">
+      <span class="sidebar-label">Starter Packs</span>
+      <a href="#starter-packs"   class="sidebar-link">All Packs</a>
+    </div>
   </aside>
 
   <article class="content">
-
     <header class="page-hero">
-      <span class="page-hero__eyebrow">Chapter 2 cont.</span>
-      <h1 class="page-hero__title"><em>Origins</em> &amp; Careers</h1>
-      <p class="page-hero__lead">Where you came from shapes who you are. Your origin represents your earliest steps into a larger world. Your career is what you've made of yourself since.</p>
+      <span class="page-hero__eyebrow">Chapter 4</span>
+      <h1 class="page-hero__title">Choose a <em>Career</em></h1>
+      <p class="page-hero__lead">Your career shapes your starting gear, special features, and proficiencies — the livelihood that defines who you are in the galaxy's economy of survival.</p>
     </header>
 
-    <div class="callout callout--tip">
+    <div class="callout callout--tip" style="margin-bottom:var(--space-8);">
       <div class="callout__icon">💡</div>
       <div class="callout__body">
-        <div class="callout__title">Expertise on Overlap</div>
-        <p>If you gain a proficiency in a skill from your career that you already have from your Species, Origin, or Path, you instead gain <strong>Expertise</strong> in that skill.</p>
+        <div class="callout__title">Expertise on overlap</div>
+        <p>If you gain a proficiency from your career that you already have from your Species, Origin, or Path, you instead gain <strong>Expertise</strong> in that skill.</p>
       </div>
     </div>
 
-    <!-- ============================================================ ORIGINS ============================================================ -->
-    <section style="margin-bottom:var(--space-16);">
-      <h2 class="section-title">Origins</h2>
-      <p>Every Hero has an origin. Each grants you a unique feature or ability, a trait modifier increase, and a tool or skill proficiency. These were your first steps — they cannot be changed later.</p>
-
-      <section id="abandoned" class="rule-section">
-        <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-          <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Abandoned</h3>
-          <span class="badge badge--core">Core Rules</span>
-        </div>
-        <p>Left behind to fend for yourself, you learned to survive where others failed.</p>
-        <div class="stat-row">
-          <span class="stat-label">Trait Increase</span><span class="stat-value"><strong>Resilience (RES) +1</strong></span>
-          <span class="stat-label">Proficiency</span><span class="stat-value">Survival</span>
-        </div>
-        <div class="feature-block">
-          <div class="feature-block__name">Survivor's Instinct</div>
-          <p>Once per short rest, reroll a failed Survival or Perception check. You must use the new roll.</p>
-        </div>
-      </section>
-
-      <section id="force-sensitive" class="rule-section">
-        <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-          <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Force Sensitive</h3>
-          <span class="badge badge--core">Core Rules</span>
-        </div>
-        <p>The Force hums faintly within you — untaught but undeniable.</p>
-        <div class="stat-row">
-          <span class="stat-label">Trait Increase</span><span class="stat-value"><strong>Force (FOR) +1</strong></span>
-          <span class="stat-label">Proficiency</span><span class="stat-value">Insight</span>
-        </div>
-        <div class="feature-block">
-          <div class="feature-block__name">Force Abilities</div>
-          <p>Gain access to Basic Force Powers.</p>
-        </div>
-      </section>
-
-      <section id="hardened" class="rule-section">
-        <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-          <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Hardened</h3>
-          <span class="badge badge--core">Core Rules</span>
-        </div>
-        <p>Life's cruelties taught you strength, cunning, and unbreakable will.</p>
-        <div class="stat-row">
-          <span class="stat-label">Trait Increase</span><span class="stat-value"><strong>Resilience (RES) +1</strong></span>
-          <span class="stat-label">Proficiency</span><span class="stat-value">Investigation</span>
-        </div>
-        <div class="feature-block">
-          <div class="feature-block__name">Street Smarts</div>
-          <p>Advantage on Insight rolls in urban or underworld environments.</p>
-        </div>
-        <div class="feature-block">
-          <div class="feature-block__name">Indomitable Spirit</div>
-          <p>Once per short rest, you gain advantage on rolls to avoid being Influenced or Frightened.</p>
-        </div>
-      </section>
-
-      <section id="jedi-initiate" class="rule-section">
-        <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-          <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Jedi Initiate</h3>
-          <span class="badge badge--core">Core Rules</span>
-        </div>
-        <p>Raised within the Jedi Temple, you know little life beyond its walls.</p>
-        <div class="stat-row">
-          <span class="stat-label">Trait Increase</span><span class="stat-value"><strong>Force (FOR) +1</strong></span>
-          <span class="stat-label">Proficiency</span><span class="stat-value">Negotiation</span>
-        </div>
-        <div class="feature-block">
-          <div class="feature-block__name">Force Abilities</div>
-          <p>Gain access to Basic Force Powers.</p>
-        </div>
-      </section>
-
-      <section id="optimist" class="rule-section">
-        <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-          <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Optimist</h3>
-          <span class="badge badge--sourcebook">Allies &amp; Adversaries</span>
-        </div>
-        <p>Sheltered beginnings left you hopeful, trusting, and perhaps naïve.</p>
-        <div class="stat-row">
-          <span class="stat-label">Trait Increase</span><span class="stat-value"><strong>Presence (PRE) +1</strong></span>
-          <span class="stat-label">Proficiency</span><span class="stat-value">Negotiation</span>
-          <span class="stat-label">Drawback</span><span class="stat-value">Disadvantage on Insight rolls to detect deception or hostile intent. You read joy and sorrow easily, but assume the best of those who would deceive you.</span>
-        </div>
-        <div class="feature-block">
-          <div class="feature-block__name">Optimistic Courage</div>
-          <p>Once per short rest, add 1d4 to any action roll before the outcome is known.</p>
-        </div>
-      </section>
-
-      <section id="prospect" class="rule-section">
-        <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-          <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Prospect</h3>
-          <span class="badge badge--core">Core Rules</span>
-        </div>
-        <p>Once a candidate or hopeful recruit — mercenary, cultist, guild member — you've trained but never fully proven yourself.</p>
-        <div class="stat-row">
-          <span class="stat-label">Trait Increase</span><span class="stat-value"><strong>Agility (AGI) +1</strong></span>
-          <span class="stat-label">Proficiency</span><span class="stat-value">Athletics</span>
-        </div>
-        <div class="feature-block">
-          <div class="feature-block__name">Eager Initiate</div>
-          <p>Once per short rest, gain advantage on one skill check or attack roll when acting under supervision or with allies nearby.</p>
-        </div>
-      </section>
-
-      <section id="survivor" class="rule-section">
-        <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-          <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Survivor</h3>
-          <span class="badge badge--sourcebook">Allies &amp; Adversaries</span>
-        </div>
-        <p>Tragedy or disaster took everything, but not your will to live.</p>
-        <div class="stat-row">
-          <span class="stat-label">Trait Increase</span><span class="stat-value"><strong>Resilience (RES) +1</strong></span>
-          <span class="stat-label">Proficiency</span><span class="stat-value">Choose Insight or Perception</span>
-        </div>
-        <div class="feature-block">
-          <div class="feature-block__name">Tragic Resilience</div>
-          <p>Once per short rest, when reduced to 0 hit point slots, drop to 1 hit point slot instead.</p>
-        </div>
-      </section>
-
-      <section id="tribal" class="rule-section">
-        <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-          <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Tribal</h3>
-          <span class="badge badge--core">Core Rules</span>
-        </div>
-        <p>Born into ancient customs, you thrive through community and tradition.</p>
-        <div class="stat-row">
-          <span class="stat-label">Trait Increase</span><span class="stat-value"><strong>Presence (PRE) +1</strong></span>
-          <span class="stat-label">Proficiencies</span><span class="stat-value">Perception, and choose one — proficiency with one martial weapon, one tool, or one musical instrument used in your tribe's traditions</span>
-        </div>
-        <div class="feature-block">
-          <div class="feature-block__name">Tribal Connection</div>
-          <p>Advantage on Negotiation rolls with those who are part of a tribal culture.</p>
-        </div>
-      </section>
-
-      <section id="witchborn" class="rule-section">
-        <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-          <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Witchborn</h3>
-          <span class="badge badge--core">Core Rules</span>
-        </div>
-        <p>Magick touched your birth, raised in cults or shaped by ichor.</p>
-        <div class="stat-row">
-          <span class="stat-label">Trait Increase</span><span class="stat-value"><strong>Force (FOR) +1</strong></span>
-          <span class="stat-label">Proficiency</span><span class="stat-value">Survival</span>
-        </div>
-        <div class="feature-block">
-          <div class="feature-block__name">Magick Abilities</div>
-          <p>Gain access to the Basic Magick Powers.</p>
-        </div>
-      </section>
-    </section>
-
-    <!-- ============================================================ CORE CAREERS ============================================================ -->
-    <h2 class="section-title" id="careers-heading">Careers</h2>
-    <p style="margin-bottom:var(--space-8);">If you gain a proficiency in a skill from your career that you have already obtained from your Species, Origin or Path, you instead gain <strong>Expertise</strong> in that skill.</p>
-
     <section id="bounty-hunter" class="rule-section">
       <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-        <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Bounty Hunter</h3>
+        <h2 class="section-title" style="margin-bottom:0;border:none;padding-bottom:0;">Bounty Hunter</h2>
         <span class="badge badge--core">Core Rules</span>
       </div>
       <p>Feared across the galaxy, you are a predator of sentients — capturing, hunting, or eliminating for credits.</p>
       <div class="stat-row">
         <span class="stat-label">Starting Equipment</span><span class="stat-value">Any weapon and armour, an Advanced survival pack, and Torturer's tools</span>
-        <span class="stat-label">Proficiency</span><span class="stat-value">Survival (Expertise if already proficient) and Torturer's tools</span>
+        <span class="stat-label">Proficiencies</span><span class="stat-value">Survival (Expertise if already proficient) and Torturer's tools</span>
       </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Feared</div>
-        <p>You have Advantage on Coercion rolls.</p>
-      </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Resourceful Hunter</div>
-        <p>Make a casting roll against a target to ensnare them in an energy snare. On a success, mark off 1 Willpower slot and immobilise your target. Your casting modifier is your Intelligence modifier + proficiency bonus.</p>
-      </div>
+      <div class="feature-block"><div class="feature-block__name">Feared</div><p>You have Advantage on Coercion rolls.</p></div>
+      <div class="feature-block"><div class="feature-block__name">Resourceful Hunter</div><p>Make a casting roll against a target to ensnare them in an energy snare. On a success, mark off 1 Willpower slot and immobilise your target. Your casting modifier is your Intelligence (INT) modifier + proficiency bonus.</p></div>
+      <p style="color:var(--color-text-muted);font-size:var(--text-xs);font-family:var(--font-mono);">Last updated 5 May 2026 | Closed Beta v1.1</p>
     </section>
 
     <section id="freedom-fighter" class="rule-section">
       <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-        <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Freedom Fighter</h3>
+        <h2 class="section-title" style="margin-bottom:0;border:none;padding-bottom:0;">Freedom Fighter</h2>
         <span class="badge badge--core">Core Rules</span>
       </div>
       <p>You've fought against oppression, tyranny, and corruption — whether for your own people or for the galaxy itself.</p>
       <div class="stat-row">
         <span class="stat-label">Starting Equipment</span><span class="stat-value">Any weapon and armour, an Advanced survival pack, and Armourer's tools</span>
-        <span class="stat-label">Proficiency</span><span class="stat-value">Survival (Expertise if already proficient) and Armourer's tools</span>
+        <span class="stat-label">Proficiencies</span><span class="stat-value">Survival (Expertise if already proficient) and Armourer's tools</span>
       </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Bolstered Resolve</div>
-        <p>Once per Full Rest, when you are reduced to 1 Willpower slot, you regain Willpower slots equal to your Presence (PRE) modifier.</p>
-      </div>
+      <div class="feature-block"><div class="feature-block__name">Bolstered Resolve</div><p>Once per Full Rest, when you are reduced to 1 Willpower slot, you regain Willpower slots equal to your Presence (PRE) modifier.</p></div>
+      <p style="color:var(--color-text-muted);font-size:var(--text-xs);font-family:var(--font-mono);">Last updated 5 May 2026 | Closed Beta v1.1</p>
     </section>
 
     <section id="jedi-knight" class="rule-section">
       <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-        <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Jedi Knight</h3>
+        <h2 class="section-title" style="margin-bottom:0;border:none;padding-bottom:0;">Jedi Knight</h2>
         <span class="badge badge--core">Core Rules</span>
       </div>
       <p>A servant of the Order, trained in the ancient ways of the Jedi. Depending on your level, you may also be a Padawan or Master.</p>
       <div class="stat-row">
-        <span class="stat-label">Starting Equipment</span><span class="stat-value">Any kyber weapon, Jedi robes (no protection, +2 to Evasion), a Devotee's pack, and Academic's tools</span>
-        <span class="stat-label">Proficiency</span><span class="stat-value">Religion (Expertise if already proficient) and Academic's tools</span>
+        <span class="stat-label">Starting Equipment</span><span class="stat-value">Any kyber weapon, Jedi robes <em>(no protection, +2 Evasion)</em>, a Devotee's pack, and Academic's tools</span>
+        <span class="stat-label">Proficiencies</span><span class="stat-value">Religion (Expertise if already proficient) and Academic's tools</span>
       </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Trained in the Jedi Arts</div>
-        <p>Gain access to Basic Force Powers. You may select an additional Tier 0 Force Power if you gain this feature from your Origin or Path.</p>
-      </div>
+      <div class="feature-block"><div class="feature-block__name">Trained in the Jedi Arts</div><p>Gain access to Basic Force Powers. You may select an additional Tier 0 Force Power if you gain this feature from your Origin or Path.</p></div>
+      <p style="color:var(--color-text-muted);font-size:var(--text-xs);font-family:var(--font-mono);">Last updated 18 Feb 2026 | Closed Beta v1.0</p>
     </section>
 
     <section id="pilot" class="rule-section">
       <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-        <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Pilot</h3>
+        <h2 class="section-title" style="margin-bottom:0;border:none;padding-bottom:0;">Pilot</h2>
         <span class="badge badge--core">Core Rules</span>
       </div>
       <p>From small freighters to starfighters, you know how to fly — and how to survive long enough to fly again.</p>
       <div class="stat-row">
         <span class="stat-label">Starting Equipment</span><span class="stat-value">Any weapon and armour, a Spacer's pack, and Cartographer's tools</span>
-        <span class="stat-label">Proficiency</span><span class="stat-value">Piloting (Expertise if already proficient) and Cartographer's tools</span>
+        <span class="stat-label">Proficiencies</span><span class="stat-value">Piloting (Expertise if already proficient) and Cartographer's tools</span>
       </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Skilled Pilot</div>
-        <p>Add your Agility (AGI) modifier to your ship's Evasion during space combat.</p>
-      </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Port Familiar</div>
-        <p>You know someone in nearly every starport. Once per Full Rest, when you arrive somewhere new, you may declare a contact you know there — a mechanic, a smuggler, a dock officer, an old friend. The GM works with you on the details. Treat them as a Friendly NPC for one favour, after which their attitude is up to the GM.</p>
-      </div>
+      <div class="feature-block"><div class="feature-block__name">Skilled Pilot</div><p>Add your Agility (AGI) modifier to your ship's Evasion during space combat.</p></div>
+      <div class="feature-block"><div class="feature-block__name">Port Familiar</div><p>You know someone in nearly every starport. Once per Full Rest, when you arrive somewhere new, you may declare a contact you know there — a mechanic, a smuggler, a dock officer, an old friend. The GM works with you on the details. Treat them as a Friendly NPC for one favour, after which their attitude is up to the GM.</p></div>
+      <p style="color:var(--color-text-muted);font-size:var(--text-xs);font-family:var(--font-mono);">Last updated 5 May 2026 | Closed Beta v1.1</p>
     </section>
 
     <section id="scholar" class="rule-section">
       <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-        <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Scholar</h3>
+        <h2 class="section-title" style="margin-bottom:0;border:none;padding-bottom:0;">Scholar</h2>
         <span class="badge badge--core">Core Rules</span>
       </div>
       <p>Knowledge is your weapon. From academia to fieldwork, you've spent your life in pursuit of understanding.</p>
       <div class="stat-row">
         <span class="stat-label">Starting Equipment</span><span class="stat-value">Any weapon and armour, an Advanced survival pack, and Academic's tools</span>
-        <span class="stat-label">Proficiency</span><span class="stat-value">History (Expertise if already proficient) and Academic's tools</span>
+        <span class="stat-label">Proficiencies</span><span class="stat-value">History (Expertise if already proficient) and Academic's tools</span>
       </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Sage Advice</div>
-        <p>Offer advice to a number of allies who can hear you equal to your Intelligence modifier. Select a skill or tool you are proficient with. Once in the next hour, the next time an advised ally makes a roll using the chosen skill or tool, they may add your proficiency bonus to the roll if they are not already proficient.</p>
-      </div>
+      <div class="feature-block"><div class="feature-block__name">Sage Advice</div><p>Offer advice to a number of allies who can hear you equal to your Intelligence (INT) modifier. Select a skill or tool you are proficient with. Once in the next hour, the next time an advised ally makes a roll using the chosen skill or tool, they may add your proficiency bonus to the roll if they are not already proficient.</p></div>
+      <p style="color:var(--color-text-muted);font-size:var(--text-xs);font-family:var(--font-mono);">Last updated 5 May 2026 | Closed Beta v1.1</p>
     </section>
 
     <section id="smuggler" class="rule-section">
       <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-        <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Smuggler</h3>
+        <h2 class="section-title" style="margin-bottom:0;border:none;padding-bottom:0;">Smuggler</h2>
         <span class="badge badge--core">Core Rules</span>
       </div>
       <p>You thrive in the shadows of law and empire — dealing in secrets, contraband, and quick escapes.</p>
       <div class="stat-row">
         <span class="stat-label">Starting Equipment</span><span class="stat-value">Any weapon and armour, common clothes, a Spacer's pack, and Thieves' tools</span>
-        <span class="stat-label">Proficiency</span><span class="stat-value">Skullduggery (Expertise if already proficient) and Thieves' tools</span>
+        <span class="stat-label">Proficiencies</span><span class="stat-value">Skullduggery (Expertise if already proficient) and Thieves' tools</span>
       </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Hidden Compartments</div>
-        <p>Advantage on Stealth or Skullduggery rolls when concealing items.</p>
-      </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Deceptive Charm</div>
-        <p>Once per Full Rest, you may reroll a failed Skullduggery roll and take the higher result.</p>
-      </div>
+      <div class="feature-block"><div class="feature-block__name">Hidden Compartments</div><p>Advantage on Stealth or Skullduggery rolls when concealing items.</p></div>
+      <div class="feature-block"><div class="feature-block__name">Deceptive Charm</div><p>Once per Full Rest, you may reroll a failed Skullduggery roll and take the higher result.</p></div>
+      <p style="color:var(--color-text-muted);font-size:var(--text-xs);font-family:var(--font-mono);">Last updated 16 Feb 2026 | Closed Beta v1.1</p>
     </section>
 
     <hr>
-    <h2 style="margin-top:var(--space-8);margin-bottom:var(--space-4);">Extended Careers</h2>
-    <p style="color:var(--color-text-subdued);margin-bottom:var(--space-8);">These careers are available from supplemental sourcebooks. Confirm availability with your GM.</p>
+
+    <div style="margin-bottom:var(--space-8);">
+      <h2 style="font-size:var(--text-2xl);font-weight:900;color:var(--color-text);margin-bottom:var(--space-3);">Expanded Careers</h2>
+      <div class="callout callout--tip">
+        <div class="callout__icon">📖</div>
+        <div class="callout__body">
+          <div class="callout__title">Sourcebook content</div>
+          <p>These careers are drawn from supplemental sourcebooks. Confirm with your GM whether expanded content is available at your table.</p>
+        </div>
+      </div>
+    </div>
 
     <section id="criminal" class="rule-section">
       <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-        <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Criminal</h3>
+        <h2 class="section-title" style="margin-bottom:0;border:none;padding-bottom:0;">Criminal</h2>
+        <span class="badge badge--sourcebook">Galactic Occupations</span>
       </div>
-      <p>You came up inside the system — the other system. Gangs, syndicates, smuggling rings, the underworld networks that move credits and contraband through every starport and slum.</p>
+      <p>You came up inside the system — the <em>other</em> system. Gangs, syndicates, smuggling rings, the underworld networks that move credits and contraband through every starport and slum.</p>
       <div class="stat-row">
         <span class="stat-label">Starting Equipment</span><span class="stat-value">Any blaster pistol or melee weapon, a Streetwise pack, and Thieves' tools</span>
-        <span class="stat-label">Proficiency</span><span class="stat-value">Skullduggery (Expertise if already proficient) and Thieves' tools</span>
+        <span class="stat-label">Proficiencies</span><span class="stat-value">Skullduggery (Expertise if already proficient) and Thieves' tools</span>
       </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Connected</div>
-        <p>You have ties to a criminal organisation — gang, syndicate, or local crew — decided with the GM at character creation. Once per session, you may declare you know someone here — a fence, an enforcer, a contact who owes a favour.</p>
-      </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Reading the Room</div>
-        <p>Advantage on Insight rolls to detect lies, threats, or hidden weapons in social situations. Advantage on Perception rolls to notice surveillance, marks, or tails.</p>
-      </div>
+      <div class="feature-block"><div class="feature-block__name">Connected</div><p>You have ties to a criminal organisation — gang, syndicate, or local crew, decided with the GM at character creation. Once per session, you may declare you know someone <em>here</em> — a fence, an enforcer, a contact who owes a favour. The GM works with you on the details. Treat them as a known figure within the underworld, with their own loyalties and demands.</p></div>
+      <div class="feature-block"><div class="feature-block__name">Reading the Room</div><p>Advantage on Insight rolls to detect lies, threats, or hidden weapons in social situations, and on Perception rolls to notice surveillance, marks, or tails.</p></div>
+      <p style="color:var(--color-text-muted);font-size:var(--text-xs);font-family:var(--font-mono);">Last updated 5 May 2026 | Closed Beta v1.1</p>
     </section>
 
     <section id="dj" class="rule-section">
       <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-        <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">DJ</h3>
+        <h2 class="section-title" style="margin-bottom:0;border:none;padding-bottom:0;">DJ</h2>
+        <span class="badge badge--sourcebook">Galactic Occupations</span>
       </div>
       <p>Not all heroes carry a blaster — some carry a beat. A DJ controls the mood, the rhythm, and the energy of a crowd.</p>
       <div class="stat-row">
         <span class="stat-label">Starting Equipment</span><span class="stat-value">Any standard blaster, a Streetwise pack, a portable sound rig, and Slicer's tools</span>
-        <span class="stat-label">Proficiency</span><span class="stat-value">Coordination (Expertise if already proficient) and Slicer's tools</span>
+        <span class="stat-label">Proficiencies</span><span class="stat-value">Coordination (Expertise if already proficient) and Slicer's tools</span>
       </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Adept Controller</div>
-        <p>Advantage on Technology or Coordination rolls made to operate, override, or improvise with physical interfaces — instrument panels, control rigs, vehicle controls.</p>
-      </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Read the Room</div>
-        <p>Once per Full Rest, declare what the dominant mood of a crowd, cantina, or room is (fearful, hostile, eager, distracted, sympathetic). The GM confirms or corrects you. You then gain Advantage on your next Influence roll that plays into that mood.</p>
-      </div>
+      <div class="feature-block"><div class="feature-block__name">Adept Controller</div><p>Advantage on Technology or Coordination rolls made to operate, override, or improvise with physical interfaces — instrument panels, control rigs, instruments, vehicle controls.</p></div>
+      <div class="feature-block"><div class="feature-block__name">Read the Room</div><p>Once per Full Rest, declare what the dominant mood is (fearful, hostile, eager, distracted, sympathetic) and the GM confirms or corrects you. Gain Advantage on your next Influence roll that plays into that mood.</p></div>
+      <p style="color:var(--color-text-muted);font-size:var(--text-xs);font-family:var(--font-mono);">Last updated 5 May 2026 | Closed Beta v1.1</p>
     </section>
 
     <section id="droidsmith" class="rule-section">
       <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-        <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Droidsmith</h3>
+        <h2 class="section-title" style="margin-bottom:0;border:none;padding-bottom:0;">Droidsmith</h2>
+        <span class="badge badge--sourcebook">Allies &amp; Adversaries</span>
       </div>
       <p>Specialist in creation, repair, and modification. You know droids inside and out — to you, machines are companions, puzzles, and weapons alike.</p>
       <div class="stat-row">
         <span class="stat-label">Starting Equipment</span><span class="stat-value">Any weapon and armour, a Tradesperson's pack, and Droidsmith's tools</span>
-        <span class="stat-label">Proficiency</span><span class="stat-value">Technology (Expertise if already proficient) and Droidsmith's tools</span>
+        <span class="stat-label">Proficiencies</span><span class="stat-value">Technology (Expertise if already proficient) and Droidsmith's tools</span>
       </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Droid Saviour</div>
-        <p>Mark off 1 Willpower slot to repair any droid within Close range by 1 Hit Point slot.</p>
-      </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Droid Speaker</div>
-        <p>Advantage on Negotiation rolls with droids and cybernetic beings. You can also understand the binary, beeps, and chitters of droids without a translator.</p>
-      </div>
+      <div class="feature-block"><div class="feature-block__name">Droid Saviour</div><p>Mark off 1 Willpower slot to repair any droid within Close range by 1 Hit Point slot.</p></div>
+      <div class="feature-block"><div class="feature-block__name">Droid Speaker</div><p>Advantage on Negotiation rolls with droids and cybernetic beings. You can also understand the binary, beeps, and chitters of droids without a translator.</p></div>
+      <p style="color:var(--color-text-muted);font-size:var(--text-xs);font-family:var(--font-mono);">Last updated 5 May 2026 | Closed Beta v1.1</p>
     </section>
 
     <section id="force-scholar" class="rule-section">
       <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-        <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Force Scholar</h3>
+        <h2 class="section-title" style="margin-bottom:0;border:none;padding-bottom:0;">Force Scholar</h2>
+        <span class="badge badge--sourcebook">Luthen Rael's Galactic Antiquities</span>
       </div>
       <p>You live for the mysteries of the Force — studying its past, preserving its secrets, and unearthing ancient truths.</p>
       <div class="stat-row">
-        <span class="stat-label">Starting Equipment</span><span class="stat-value">Any blaster, scholar's robes (no protection, +2 Evasion), a Devotee's pack, and Academic's tools</span>
-        <span class="stat-label">Proficiency</span><span class="stat-value">Religion or History (Expertise if already proficient) and Academic's tools</span>
+        <span class="stat-label">Starting Equipment</span><span class="stat-value">Any blaster, scholar's robes <em>(no protection, +2 Evasion)</em>, a Devotee's pack, and Academic's tools</span>
+        <span class="stat-label">Proficiencies</span><span class="stat-value">Religion or History (Expertise if already proficient) and Academic's tools</span>
       </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Otherworldly Knowledge</div>
-        <p>Advantage on Religion and History rolls relating to the Force, ancient orders, and Force-using cultures.</p>
-      </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Echoes in the Dust</div>
-        <p>When you spend time at a Force-touched site — a ruin, a relic, a place where the Force has gathered — you may make a History or Religion roll to glimpse what happened there. The GM tells you something true about its past on a success.</p>
-      </div>
+      <div class="feature-block"><div class="feature-block__name">Otherworldly Knowledge</div><p>Advantage on Religion and History rolls relating to the Force, ancient orders, and Force-using cultures.</p></div>
+      <div class="feature-block"><div class="feature-block__name">Echoes in the Dust</div><p>When you spend time at a Force-touched site — a ruin, a relic, a place where the Force has gathered — you may make a History or Religion roll to glimpse what happened there. The GM tells you something true about its past on a success.</p></div>
+      <p style="color:var(--color-text-muted);font-size:var(--text-xs);font-family:var(--font-mono);">Last updated 5 May 2026 | Closed Beta v1.1</p>
     </section>
 
     <section id="gladiator" class="rule-section">
       <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-        <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Gladiator</h3>
+        <h2 class="section-title" style="margin-bottom:0;border:none;padding-bottom:0;">Gladiator</h2>
+        <span class="badge badge--sourcebook">Galactic Occupations</span>
       </div>
       <p>Raised in the pits, gladiators are brutal fighters who turn combat into spectacle.</p>
       <div class="stat-row">
         <span class="stat-label">Starting Equipment</span><span class="stat-value">Any melee physical weapon, a shield or armour, a Streetwise pack, and Armourer's tools</span>
-        <span class="stat-label">Proficiency</span><span class="stat-value">Coercion (Expertise if already proficient) and Armourer's tools</span>
+        <span class="stat-label">Proficiencies</span><span class="stat-value">Coercion (Expertise if already proficient) and Armourer's tools</span>
       </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Blood and Sand</div>
-        <p>When you reduce an adversary to 0 Hit Point slots with a Minor Critical Success, regain 4 Willpower slots (up to your maximum) as adrenaline and the roar of the crowd surge through you.</p>
-      </div>
+      <div class="feature-block"><div class="feature-block__name">Blood and Sand</div><p>When you reduce an adversary to 0 Hit Point slots with a Minor Critical Success, regain 4 Willpower slots (up to your maximum) as adrenaline and the roar of the crowd surge through you.</p></div>
+      <p style="color:var(--color-text-muted);font-size:var(--text-xs);font-family:var(--font-mono);">Last updated 5 May 2026 | Closed Beta v1.1</p>
     </section>
 
     <section id="jedi-wayseeker" class="rule-section">
       <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-        <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Jedi Wayseeker</h3>
+        <h2 class="section-title" style="margin-bottom:0;border:none;padding-bottom:0;">Jedi Wayseeker</h2>
+        <span class="badge badge--sourcebook">Beyond the Stormwall</span>
       </div>
       <p>Unlike other Jedi, you follow no council — only the Force itself. You travel freely, guided by instinct and purpose.</p>
       <div class="stat-row">
-        <span class="stat-label">Starting Equipment</span><span class="stat-value">Any kyber weapon, Jedi robes (no protection, +2 Evasion), comm link, an Advanced survival pack, and Cartographer's tools</span>
-        <span class="stat-label">Proficiency</span><span class="stat-value">Survival (Expertise if already proficient) and Cartographer's tools</span>
+        <span class="stat-label">Starting Equipment</span><span class="stat-value">Any kyber weapon, Jedi robes <em>(no protection, +2 Evasion)</em>, comm link, an Advanced survival pack, and Cartographer's tools</span>
+        <span class="stat-label">Proficiencies</span><span class="stat-value">Survival (Expertise if already proficient) and Cartographer's tools</span>
       </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Trained in the Jedi Arts</div>
-        <p>Gain access to Basic Force Powers. You may select an additional Tier 0 Force Power if you gain this feature from your Origin or Path.</p>
-      </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Guided by the Force</div>
-        <p>Advantage on Survival rolls whilst travelling unfamiliar terrain or making your way to an unvisited destination. Once per Full Rest, when you would fail an Insight or Survival roll whilst seeking a path, person, or truth, you may reroll and take the higher result.</p>
-      </div>
+      <div class="feature-block"><div class="feature-block__name">Trained in the Jedi Arts</div><p>Gain access to Basic Force Powers. You may select an additional Tier 0 Force Power if you gain this feature from your Origin or Path.</p></div>
+      <div class="feature-block"><div class="feature-block__name">Guided by the Force</div><p>Advantage on Survival rolls whilst travelling unfamiliar terrain. Once per Full Rest, when you would fail an Insight or Survival roll whilst seeking a path, person, or truth, you may reroll and take the higher result.</p></div>
+      <p style="color:var(--color-text-muted);font-size:var(--text-xs);font-family:var(--font-mono);">Last updated 5 May 2026 | Closed Beta v1.1</p>
     </section>
 
     <section id="labourer" class="rule-section">
       <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-        <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Labourer</h3>
+        <h2 class="section-title" style="margin-bottom:0;border:none;padding-bottom:0;">Labourer</h2>
+        <span class="badge badge--sourcebook">Galactic Occupations</span>
       </div>
       <p>Your strength and endurance were forged through toil in fields, factories, or mines.</p>
       <div class="stat-row">
-        <span class="stat-label">Starting Equipment</span><span class="stat-value">Any standard weapon, work clothes, a Tradesperson's pack, and a toolkit of your choice (Armourer's, Mechanic's, or Herbalist's tools)</span>
-        <span class="stat-label">Proficiency</span><span class="stat-value">Athletics (Expertise if already proficient) and your chosen toolkit</span>
+        <span class="stat-label">Starting Equipment</span><span class="stat-value">Any standard weapon, work clothes, a Tradesperson's pack, and a toolkit of your choice — Armourer's tools, Mechanic's tools, or Herbalist's tools</span>
+        <span class="stat-label">Proficiencies</span><span class="stat-value">Athletics (Expertise if already proficient) and your chosen toolkit</span>
       </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Grit</div>
-        <p>You gain +1 Hit Point slot (starting maximum 7 instead of 6).</p>
-      </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Hard Graft</div>
-        <p>When working on a physical task that requires sustained effort over time — repairs, hauling, digging, building — you complete the work in half the time it would take an unskilled hand.</p>
-      </div>
+      <div class="feature-block"><div class="feature-block__name">Grit</div><p>You gain +1 Hit Point slot (starting maximum 7 instead of 6).</p></div>
+      <div class="feature-block"><div class="feature-block__name">Hard Graft</div><p>When working on a physical task that requires sustained effort over time — repairs, hauling, digging, building — you complete the work in half the time it would take an unskilled hand.</p></div>
+      <p style="color:var(--color-text-muted);font-size:var(--text-xs);font-family:var(--font-mono);">Last updated 5 May 2026 | Closed Beta v1.1</p>
     </section>
 
     <section id="meknek" class="rule-section">
       <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-        <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Meknek</h3>
+        <h2 class="section-title" style="margin-bottom:0;border:none;padding-bottom:0;">Meknek</h2>
+        <span class="badge badge--sourcebook">Galactic Occupations</span>
       </div>
-      <p>Hull-crawlers and vacuum-walkers, mekneks are mechanics who risk their lives repairing ships mid-flight or in deep space.</p>
+      <p>Hull-crawlers and vacuum-walkers — mechanics who risk their lives repairing ships mid-flight or in deep space.</p>
       <div class="stat-row">
         <span class="stat-label">Starting Equipment</span><span class="stat-value">Any armour, work clothes, gripton boots, a Spacer's pack, and Mechanic's tools</span>
-        <span class="stat-label">Proficiency</span><span class="stat-value">Athletics (Expertise if already proficient) and Mechanic's tools</span>
+        <span class="stat-label">Proficiencies</span><span class="stat-value">Athletics (Expertise if already proficient) and Mechanic's tools</span>
       </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Risk Averse</div>
-        <p>While in zero gravity, you ignore Disadvantage on all rolls — gripton boots and hard-earned instinct keep you anchored. Advantage on saving rolls made to avoid falling, slipping, or being thrown clear of a surface.</p>
-      </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Hull Sense</div>
-        <p>When making a Technology roll to repair, diagnose, or jury-rig a starship — whether dockside or mid-flight — you may add your Resilience (RES) modifier to the roll instead of Intelligence.</p>
-      </div>
+      <div class="feature-block"><div class="feature-block__name">Risk Averse</div><p>Whilst in zero gravity, you ignore Disadvantage on all rolls. Advantage on saving rolls made to avoid falling, slipping, or being thrown clear of a surface.</p></div>
+      <div class="feature-block"><div class="feature-block__name">Hull Sense</div><p>When making a Technology roll to repair, diagnose, or jury-rig a starship, you may add your Resilience (RES) modifier to the roll instead of Intelligence.</p></div>
+      <p style="color:var(--color-text-muted);font-size:var(--text-xs);font-family:var(--font-mono);">Last updated 5 May 2026 | Closed Beta v1.1</p>
     </section>
 
     <section id="outlaw" class="rule-section">
       <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-        <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Outlaw</h3>
+        <h2 class="section-title" style="margin-bottom:0;border:none;padding-bottom:0;">Outlaw</h2>
+        <span class="badge badge--sourcebook">Galactic Occupations</span>
       </div>
-      <p>You're wanted across systems — for rebellion, for refusal, for crimes the powerful would rather forget. You ride alone or with the few who'd never sell you out.</p>
+      <p>You're wanted across systems — for rebellion, for refusal, for crimes the powerful would rather forget.</p>
       <div class="stat-row">
         <span class="stat-label">Starting Equipment</span><span class="stat-value">Any blaster, light armour, an Advanced survival pack, a forged identichip or false papers, and Thieves' tools</span>
-        <span class="stat-label">Proficiency</span><span class="stat-value">Stealth (Expertise if already proficient) and Thieves' tools</span>
+        <span class="stat-label">Proficiencies</span><span class="stat-value">Stealth (Expertise if already proficient) and Thieves' tools</span>
       </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Wanted</div>
-        <p>You begin play with a bounty on your head — the GM and you decide together who placed it, why, and how big it is. When the bounty is active in a scene, you have Advantage on Stealth rolls to move unseen and on Insight rolls to spot informers and tails.</p>
-      </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Nothing Left to Lose</div>
-        <p>Once per Full Rest, when you would mark off your last Willpower slot, you instead clear 1 Willpower slot and gain Advantage on your next action roll.</p>
-      </div>
+      <div class="feature-block"><div class="feature-block__name">Wanted</div><p>You begin play with a bounty on your head — GM and you decide who placed it, why, and how big. When the bounty is active in a scene, Advantage on Stealth rolls to move unseen, and on Insight rolls to spot informers and tails.</p></div>
+      <div class="feature-block"><div class="feature-block__name">Nothing Left to Lose</div><p>Once per Full Rest, when you would mark off your last Willpower slot, instead clear 1 Willpower slot and gain Advantage on your next action roll.</p></div>
+      <p style="color:var(--color-text-muted);font-size:var(--text-xs);font-family:var(--font-mono);">Last updated 5 May 2026 | Closed Beta v1.1</p>
     </section>
 
     <section id="treasure-hunter" class="rule-section">
       <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-        <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Treasure Hunter</h3>
+        <h2 class="section-title" style="margin-bottom:0;border:none;padding-bottom:0;">Treasure Hunter</h2>
+        <span class="badge badge--sourcebook">Galactic Occupations</span>
       </div>
       <p>Explorer of ruins, raider of tombs, finder of lost riches — fortune and glory are your goals.</p>
       <div class="stat-row">
         <span class="stat-label">Starting Equipment</span><span class="stat-value">Any blaster pistol or physical weapon, light armour, an Advanced survival pack, and Cartographer's tools</span>
-        <span class="stat-label">Proficiency</span><span class="stat-value">Perception (Expertise if already proficient) and Cartographer's tools</span>
+        <span class="stat-label">Proficiencies</span><span class="stat-value">Perception (Expertise if already proficient) and Cartographer's tools</span>
       </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Fortune Favours the Bold</div>
-        <p>Once per encounter, reroll a failed Agility or Perception roll and take the higher result.</p>
-      </div>
-      <div class="feature-block">
-        <div class="feature-block__name">Lore of the Lost</div>
-        <p>When you encounter ruins, ancient sites, or relics of a forgotten civilisation, make a History roll to recall a useful detail — a layout, a hazard, a likely hiding place. The GM tells you something true and useful on a success.</p>
-      </div>
+      <div class="feature-block"><div class="feature-block__name">Fortune Favours the Bold</div><p>Once per encounter, reroll a failed Agility or Perception roll and take the higher result.</p></div>
+      <div class="feature-block"><div class="feature-block__name">Lore of the Lost</div><p>When you encounter ruins, ancient sites, or relics of a forgotten civilisation, make a History roll to recall a useful detail. The GM tells you something true and useful on a success.</p></div>
+      <p style="color:var(--color-text-muted);font-size:var(--text-xs);font-family:var(--font-mono);">Last updated 5 May 2026 | Closed Beta v1.1</p>
     </section>
 
-    <!-- Starter Packs -->
+    <hr>
+
     <section id="starter-packs" class="rule-section">
       <h2 class="section-title">Starter Packs</h2>
-      <p>Each career provides a curated bundle of items designed to reflect that career's training, background, and expected mission loadout. You receive the full contents of your pack during character creation.</p>
-
+      <p>Each career lists a starting pack. You receive the full contents at character creation.</p>
       <div class="grid-2">
-        <div class="card">
-          <div class="card__title">Basic Survival Pack</div>
-          <p>15 ration portions (dry travel biscuits), 3 healing patches, communicator, bedroll, purifying canteen, glowrod, fibrecord (6m), multi-tool</p>
-        </div>
-        <div class="card">
-          <div class="card__title">Advanced Survival Pack</div>
-          <p>20 ration portions (field rations), 5 healing stims, long-range communicator, bedroll, purifying canteen, glowrod, fire starters, macrobinoculars</p>
-        </div>
-        <div class="card">
-          <div class="card__title">Spacer's Pack</div>
-          <p>15 ration portions (compressed ship rations), 3 healing stims, communicator, bedroll, canteen, glowrod, 6 power cells, fibrecord (6m) with mag-clamps</p>
-        </div>
-        <div class="card">
-          <div class="card__title">Devotee's Pack</div>
-          <p>10 ration portions (fasting wafers), 3 healing patches, communicator, bedroll, purifying canteen, glow lamp, portable holo-projector, field stabiliser (1 charge)</p>
-        </div>
-        <div class="card">
-          <div class="card__title">Tradesperson's Pack</div>
-          <p>10 ration portions (street food and preserves), 3 healing patches, communicator, bedroll, canteen, glowrod, spare parts pouch, hand-held diagnostic scanner</p>
-        </div>
-        <div class="card">
-          <div class="card__title">Streetwise Pack</div>
-          <p>10 ration portions (street food and dried fruit), 3 healing patches, communicator, bedroll, canteen, glowrod, datapad, lockspike (one-use)</p>
-        </div>
+        <div class="card"><div class="card__title">Basic Survival Pack</div><p>15 ration portions, 3 healing patches, communicator, bedroll, purifying canteen, glowrod, fibrecord (6m), multi-tool</p></div>
+        <div class="card"><div class="card__title">Advanced Survival Pack</div><p>20 ration portions, 5 healing stims, long-range communicator, bedroll, purifying canteen, glowrod, fire starters, macrobinoculars</p></div>
+        <div class="card"><div class="card__title">Spacer's Pack</div><p>15 ration portions, 3 healing stims, communicator, bedroll, canteen, glowrod, 6 power cells, fibrecord (6m) with mag-clamps</p></div>
+        <div class="card"><div class="card__title">Devotee's Pack</div><p>10 ration portions, 3 healing patches, communicator, bedroll, canteen, glow lamp, portable holo-projector, field stabiliser (1 charge)</p></div>
+        <div class="card"><div class="card__title">Tradesperson's Pack</div><p>10 ration portions, 3 healing patches, communicator, bedroll, canteen, glowrod, spare parts pouch, hand-held diagnostic scanner</p></div>
+        <div class="card"><div class="card__title">Streetwise Pack</div><p>10 ration portions, 3 healing patches, communicator, bedroll, canteen, glowrod, datapad, lockspike (one-use)</p></div>
       </div>
     </section>
-
   </article>
 </div>
-
 <div id="site-footer-mount"></div>
 <script src="js/components.js"></script>
 </body>
