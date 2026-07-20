@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core Rules — MTFBYW</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+<div id="site-header-mount"></div>
+
+<div class="page-wrap">
+
+  <aside class="sidebar">
+    <div class="sidebar-group">
+      <span class="sidebar-label">Core Loop</span>
+      <a href="#gameplay-loop"   class="sidebar-link">Gameplay Loop</a>
+      <a href="#focus"           class="sidebar-link">Focus</a>
+      <a href="#balance-despair" class="sidebar-link">Balance &amp; Despair</a>
+      <a href="#crit-fail"       class="sidebar-link">Critical Failure</a>
+      <a href="#target-score"    class="sidebar-link">Target Score</a>
+    </div>
+    <div class="sidebar-group">
+      <span class="sidebar-label">Resources</span>
+      <a href="#willpower"       class="sidebar-link">Willpower</a>
+      <a href="#bonuses"         class="sidebar-link">Hero Bonuses</a>
+    </div>
+    <div class="sidebar-group">
+      <span class="sidebar-label">Actions</span>
+      <a href="#passives"        class="sidebar-link">Passives</a>
+      <a href="#moves"           class="sidebar-link">Moves</a>
+      <a href="#manoeuvres"      class="sidebar-link">Manoeuvres</a>
+      <a href="#trigger-moves"   class="sidebar-link">Trigger Moves</a>
+      <a href="#rituals"         class="sidebar-link">Rituals</a>
+      <a href="#saving-rolls"    class="sidebar-link">Saving Rolls</a>
+    </div>
+  </aside>
+
+  <article class="content">
+
+    <header class="page-hero">
+      <span class="page-hero__eyebrow">Chapter 5</span>
+      <h1 class="page-hero__title">Core <em>Rules</em></h1>
+      <p class="page-hero__lead">MTFBYW is a game of Willpower and fate. The GM describes scenarios from a galaxy far, far away. Players share the Focus to describe how their Heroes react and what they do next.</p>
+    </header>
+
+    <!-- Gameplay Loop -->
+    <section id="gameplay-loop" class="rule-section">
+      <h2 class="section-title">Gameplay Loop</h2>
+      <p>The core gameplay loop is the rhythm that drives every scene — whether in the heat of combat or the quiet tension between it.</p>
+
+      <ol class="step-list">
+        <li>
+          <div>
+            <strong>Set the Scene</strong>
+            <p>The GM paints the moment — describing the Heroes' surroundings and bringing the world into focus. Its dangers, its people, and the details that matter. This is where stakes begin to emerge.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Ask and Answer Questions</strong>
+            <p>The Heroes look closer, asking questions to better understand the situation. The GM answers with what can be readily known, or turns the question back to the table to deepen the moment.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Build the Story</strong>
+            <p>As the scene unfolds, opportunities arise. The Heroes describe what they do and how they act. If success is certain, the story moves forward without a roll. When the outcome is uncertain, the dice are called upon.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Return to the Scene</strong>
+            <p>The cycle continues. The GM reframes the moment, reflecting the consequences of the Heroes' actions and revealing what has changed.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Focus -->
+    <section id="focus" class="rule-section">
+      <h2 class="section-title">Focus</h2>
+      <p>When a Hero, NPC, or Adversary is acting, they are <strong>in Focus</strong> — the immediate centre of both the narrative and the game mechanics. Focus is passed around the table continuously, and in some cases, even the environment can hold it.</p>
+
+      <div class="callout callout--balance">
+        <div class="callout__icon">⚖️</div>
+        <div class="callout__body">
+          <div class="callout__title">No Initiative, No Fixed Turn Order</div>
+          <p>The flow of action follows the Focus. When it's yours, it's your moment — to express who your Hero is through roleplay, or to test what they're made of through an action roll. When that moment resolves, Focus shifts to someone else.</p>
+        </div>
+      </div>
+
+      <h3 class="section-subtitle">How Focus Moves</h3>
+      <p>Typically, Focus moves to someone the story naturally follows next, someone who hasn't had Focus in a while, or someone chosen by a triggered mechanic.</p>
+      <ul>
+        <li>In social settings, Focus passes organically between Heroes, NPCs, and non-aggressive Adversaries without formal declaration</li>
+        <li>Once the Dyad Dice begin to roll, Focus remains with the Heroes until they fail a roll — then it swings to the GM, who may make a GM move</li>
+        <li>The GM can seize Focus at any moment by spending Despair, and may continue spending Despair to shift it between Adversaries before returning it to the Heroes</li>
+        <li>A Hero can spend Willpower to pull Focus back</li>
+      </ul>
+    </section>
+
+    <!-- Balance and Despair -->
+    <section id="balance-despair" class="rule-section">
+      <h2 class="section-title">Balance &amp; Despair</h2>
+      <p>Make any action roll using your <strong>Dyad Dice</strong> — two d12s, one for Balance and one for Despair (different colours). You do not expend or gain anything before the roll.</p>
+
+      <h3 class="section-subtitle">What Are You Rolling Against?</h3>
+      <p>Every roll has a number to beat — the <strong>Difficulty</strong>. Meet or exceed it, and you succeed. Fall short, and you don't. Difficulty comes from:</p>
+      <ul>
+        <li><strong>An Adversary:</strong> Attack rolls aim for their Evasion. Most other rolls aim for their Difficulty score.</li>
+        <li><strong>The Situation:</strong> The GM sets the Difficulty. A good rule of thumb is 12 + the relevant modifier.</li>
+        <li><strong>An Extended Challenge:</strong> Some tasks use a Target Score — a running total you build toward over several rolls.</li>
+      </ul>
+
+      <h3 class="section-subtitle">The 7 Roll Outcomes</h3>
+      <div class="outcomes-grid">
+        <div class="outcome-chip outcome-chip--success-balance">
+          <div class="outcome-chip__label">✨ Success with Balance</div>
+          <div class="outcome-chip__text">Total meets or beats Difficulty. Balance Die shows higher result. You succeed and clear 1 Willpower slot.</div>
+        </div>
+        <div class="outcome-chip outcome-chip--success-despair">
+          <div class="outcome-chip__label">⚡ Success with Despair</div>
+          <div class="outcome-chip__text">Total meets or beats Difficulty. Despair Die shows higher result. You succeed with a cost or complication. You do not clear Willpower. GM gains a Despair or makes a free move.</div>
+        </div>
+        <div class="outcome-chip outcome-chip--failure-balance">
+          <div class="outcome-chip__label">🔸 Failure with Balance</div>
+          <div class="outcome-chip__text">Total falls short. Balance Die shows higher result. You fail with a minor consequence but still clear 1 Willpower slot. Focus immediately shifts to the GM.</div>
+        </div>
+        <div class="outcome-chip outcome-chip--failure-despair">
+          <div class="outcome-chip__label">💥 Failure with Despair</div>
+          <div class="outcome-chip__text">Total falls short. Despair Die shows higher result. You fail with a major consequence, mark off a Willpower slot, and the GM gains a Despair. Focus immediately shifts to the GM.</div>
+        </div>
+        <div class="outcome-chip outcome-chip--crit-minor">
+          <div class="outcome-chip__label">🎯 Minor Critical Success</div>
+          <div class="outcome-chip__text">Both Dyad Dice show matching results (2–11). You automatically succeed regardless of the total. If an attack roll, roll all damage dice twice and add modifiers once. Clear 3 Willpower slots. Counts as a roll with Balance.</div>
+        </div>
+        <div class="outcome-chip outcome-chip--crit-major">
+          <div class="outcome-chip__label">⭐ Major Critical Success</div>
+          <div class="outcome-chip__text">Both Dyad Dice show 12. You automatically succeed. If an attack roll, take maximum possible damage dice result, multiply by 2, then add modifiers once. Clear all Willpower slots. Counts as Balance.</div>
+        </div>
+        <div class="outcome-chip outcome-chip--crit-fail">
+          <div class="outcome-chip__label">💀 Major Critical Failure</div>
+          <div class="outcome-chip__text">Both Dyad Dice show 1. You automatically fail. Roll on the Critical Failure table. Mark 3 Willpower slots. GM gains 3 Despair. Focus shifts to the GM. Counts as Despair.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Critical Failure Table -->
+    <section id="crit-fail" class="rule-section">
+      <h2 class="section-title">Critical Failure Table</h2>
+      <p>When both Dyad Dice show 1, roll a d20 to determine the severity of your failure.</p>
+      <table>
+        <thead>
+          <tr><th>Roll</th><th>Effect</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="die-pill">20</span></td><td>Nothing happens. Count yourself lucky.</td></tr>
+          <tr><td><span class="die-pill">19</span></td><td>The GM gains an extra Despair.</td></tr>
+          <tr><td><span class="die-pill">18</span></td><td>Your weapon jams, overheats, or slips. You cannot use it until you spend a manoeuvre to recover it.</td></tr>
+          <tr><td><span class="die-pill">17</span></td><td>Your failure ripples outward. Choose one ally within short range — they must mark off 1 Willpower slot.</td></tr>
+          <tr><td><span class="die-pill">16</span></td><td>Your armour becomes compromised. Mark off 2 Armour slots.</td></tr>
+          <tr><td><span class="die-pill">15</span></td><td>Your incentive wanes. Mark off a further 3 Willpower slots.</td></tr>
+          <tr><td><span class="die-pill">14</span></td><td>The ground gives way or an explosion throws you. You are knocked Prone and pushed one range band from your target.</td></tr>
+          <tr><td><span class="die-pill">13</span></td><td>You are struck by lightning. Take deadly lightning damage appropriate to your level.</td></tr>
+          <tr><td><span class="die-pill">12</span></td><td>The balance has tipped. Your next Dyad Dice roll will be with Despair, regardless of the outcome.</td></tr>
+          <tr><td><span class="die-pill">11</span></td><td>Your senses are overwhelmed. You gain the Weakened condition.</td></tr>
+          <tr><td><span class="die-pill">10</span></td><td>You lose the will to live. Mark off all 3 Hit Point slots.</td></tr>
+          <tr><td><span class="die-pill">9</span></td><td>Hesitation costs you. An Adversary in range immediately takes the Focus and makes a free attack against you before the GM makes a move.</td></tr>
+          <tr><td><span class="die-pill">8</span></td><td>Overwhelm creeps in. You cannot take the Focus again for a Countdown of 6.</td></tr>
+          <tr><td><span class="die-pill">7</span></td><td>The Force recoils from you. Lose access to all Force powers until your next short rest. If not Force-sensitive, gain the Frightened condition instead.</td></tr>
+          <tr><td><span class="die-pill">6</span></td><td>Your mind clouds. You cannot make trigger rolls until your next rest.</td></tr>
+          <tr><td><span class="die-pill">5</span></td><td>Your determination dwindles. Mark off 1 Willpower.</td></tr>
+          <tr><td><span class="die-pill">4</span></td><td>The GM gains a further 3 extra Despair.</td></tr>
+          <tr><td><span class="die-pill">3</span></td><td>Self-doubt seeps in. You cannot benefit from Advantage until your next short rest.</td></tr>
+          <tr><td><span class="die-pill">2</span></td><td>You trip and hurt your head. Fall Prone, mark off 1 HP slot, remove one feature card until next rest.</td></tr>
+          <tr><td><span class="die-pill die-pill--danger">1</span></td><td>Your mental toughness dwindles. Mark off 6 Willpower.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Target Score -->
+    <section id="target-score" class="rule-section">
+      <h2 class="section-title">Target Score</h2>
+      <p>Some challenges are too big to settle with a single roll — repairing a crashed speeder, slicing through a fortress of ice, researching a forgotten ritual. These are resolved using a Target Score.</p>
+
+      <p>A Target Score is written as <strong>Target / Difficulty</strong> — for example, 48/12.</p>
+      <ul>
+        <li>The <strong>Target</strong> is the total progress you must reach to complete the task</li>
+        <li>The <strong>Difficulty</strong> is the number each individual roll must meet or beat to count as a success</li>
+      </ul>
+
+      <div class="callout callout--tip">
+        <div class="callout__icon">🔧</div>
+        <div class="callout__body">
+          <div class="callout__title">The Right Tool</div>
+          <p>Many Target Scores call for the right tool or kit. Attempting the work without one is possible, but rarely wise. The right gear speeds the work; the wrong gear — or none at all — makes every roll harder.</p>
+        </div>
+      </div>
+
+      <table style="margin-top:var(--space-4);">
+        <thead>
+          <tr><th>Roll Result</th><th>Progress Added</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Major Critical Success</td><td>Instant completion</td></tr>
+          <tr><td>Minor Critical Success</td><td>Dice total, doubled</td></tr>
+          <tr><td>Success with Balance</td><td>Full dice total</td></tr>
+          <tr><td>Success with Despair</td><td>Full dice total</td></tr>
+          <tr><td>Failure with Balance</td><td>Full dice total</td></tr>
+          <tr><td>Failure with Despair</td><td>No progress</td></tr>
+          <tr><td>Major Critical Failure</td><td>No progress (GM may erase prior progress)</td></tr>
+        </tbody>
+      </table>
+      <p>A successful roll always adds progress — cleanly on Balance, or at a cost on Despair. Even a failed roll can count, so long as Balance is with you. A failed roll with Despair is wasted effort — the tool slips, the cipher resists.</p>
+    </section>
+
+    <!-- Willpower -->
+    <section id="willpower" class="rule-section">
+      <h2 class="section-title">Willpower</h2>
+      <p>Willpower is a core resource — representing both your ability to act and your mental resilience under pressure. As it is expended, it reflects mounting strain, risk, and mental and physical expenditure. Willpower carries over between sessions.</p>
+
+      <h3 class="section-subtitle">Spending Willpower</h3>
+      <p>You can spend Willpower to:</p>
+      <ul>
+        <li>Activate a specific feature from your Species, Origin, Path, or Career</li>
+        <li>Perform a Trigger move (costs 1 Willpower per trigger)</li>
+        <li>Use certain Manoeuvres, such as Stand Up or Disengage</li>
+        <li>Help another Hero or NPC (costs 1 Willpower, then roll an advantage die)</li>
+        <li>Clear a Condition (where the condition allows it)</li>
+        <li>Interrupt the GM and seize Focus (costs 3 Willpower)</li>
+      </ul>
+
+      <h3 class="section-subtitle">Losing Willpower</h3>
+      <p>Willpower can also be depleted through Dyad Dice rolls, traversing hostile environments, or acting while Dying.</p>
+
+      <h3 class="section-subtitle">Willpower Penalties</h3>
+      <p>Your first 6 Willpower slots are free to use with no penalties. Once you access the further 6 slots (available through Path progression), you incur roll penalties.</p>
+      <table>
+        <thead><tr><th>Slots Marked</th><th>Roll Penalty</th></tr></thead>
+        <tbody>
+          <tr><td>1–6 slots</td><td>No penalty</td></tr>
+          <tr><td>7 slots</td><td>−2 on Dyad Dice rolls</td></tr>
+          <tr><td>8 slots</td><td>−4 on Dyad Dice rolls</td></tr>
+          <tr><td>9 slots</td><td>−6 on Dyad Dice rolls</td></tr>
+          <tr><td>10 slots</td><td>−8 on Dyad Dice rolls</td></tr>
+          <tr><td>11 slots</td><td>−10 on Dyad Dice rolls</td></tr>
+          <tr><td>All 12 slots</td><td>−12 on Dyad Dice rolls and you gain the Unconscious condition (or die, if already Dying)</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="section-subtitle">Restoring Willpower</h3>
+      <ul>
+        <li>Short rest: clear <span class="die-pill">1d4</span> used Willpower slots</li>
+        <li>Full rest: clear all Willpower slots</li>
+        <li>Stimulants and items may restore Willpower temporarily, but often at a cost</li>
+      </ul>
+
+      <div class="callout callout--danger">
+        <div class="callout__icon">⚠️</div>
+        <div class="callout__body">
+          <div class="callout__title">Running Out of Willpower</div>
+          <p>At 0 Willpower, you gain the Unconscious condition. You remain unconscious until Willpower is restored. If you are Dying and expend your last Willpower slot, you die. If Unconscious with 0 Willpower and you expend your last Hit Point slot, you also die.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Bonuses -->
+    <section id="bonuses" class="rule-section">
+      <h2 class="section-title">Hero Bonuses</h2>
+
+      <h3 class="section-subtitle">Proficiency</h3>
+      <p>Your Proficiency is determined by your level and path progression options. When you make an action roll, saving roll, or attack using something you are proficient with, add your Proficiency bonus to the roll.</p>
+      <ul>
+        <li>If you have Expertise, add double your Proficiency bonus</li>
+        <li>If proficient with a tool or kit, add 1d6 instead of your Proficiency bonus</li>
+        <li>If you have Expertise with a tool or kit, add 2d6 instead</li>
+      </ul>
+
+      <h3 class="section-subtitle">Advantage</h3>
+      <p>When you have Advantage, roll an additional 1d6 and add it to your total. This does not affect Balance or Despair — only the final result.</p>
+
+      <h3 class="section-subtitle">Disadvantage</h3>
+      <p>When you have Disadvantage, roll an additional 1d6 and subtract it from your total. This does not affect Balance or Despair — only the final result.</p>
+    </section>
+
+    <!-- Taking Action -->
+    <section id="passives" class="rule-section">
+      <h2 class="section-title">Taking Action</h2>
+      <p>Every action you take, every roll you make — it all lives here. Moves, manoeuvres, triggers, and rituals are the building blocks of everything your Hero does when it counts.</p>
+
+      <h3 class="section-subtitle">Passives</h3>
+      <p>Some abilities don't need activating. They're simply part of who your Hero is — baked into their training, their species, their connection to the Force, or the gear they carry.</p>
+      <p>A Passive is always in effect. It requires no action, no Willpower, and no trigger. Your Passives are listed on your character sheet and within your Path, species, and item features.</p>
+    </section>
+
+    <!-- Moves -->
+    <section id="moves" class="rule-section">
+      <h2 class="section-title">Moves (Action Rolls)</h2>
+      <p>An action roll is any Dyad Dice roll made when the outcome of an action is uncertain and carries meaningful consequence.</p>
+
+      <div class="tabs">
+        <div class="tab-list">
+          <button class="tab-btn">Attack</button>
+          <button class="tab-btn">Cast a Power</button>
+          <button class="tab-btn">Dodge</button>
+          <button class="tab-btn">Grapple</button>
+          <button class="tab-btn">Hide</button>
+          <button class="tab-btn">Influence</button>
+          <button class="tab-btn">Shove</button>
+          <button class="tab-btn">Steal</button>
+          <button class="tab-btn">Study</button>
+        </div>
+
+        <div class="tab-panel">
+          <p>Roll your Dyad Dice and add your attack modifier. This is usually <strong>Strength (STR)</strong> for melee weapons and <strong>Agility (AGI)</strong> for ranged weapons.</p>
+          <p>Unless stated otherwise, the Difficulty equals the target's Evasion score.</p>
+        </div>
+
+        <div class="tab-panel">
+          <p>Roll your Dyad Dice and add your casting modifier, as defined by your Path or the feature itself. Unless stated otherwise, Difficulty equals the target's Difficulty score.</p>
+          <p>If a power targets multiple adversaries, make a single casting roll and a single damage roll, then apply the result to each target individually.</p>
+        </div>
+
+        <div class="tab-panel">
+          <p>Make an <strong>Agility (Coordination)</strong> roll against the Adversary's Difficulty. On a success, the next time that Adversary attacks you before you take Focus again, they have Disadvantage on the attack.</p>
+          <p>You may Dodge against multiple Adversaries, making a separate roll for each.</p>
+        </div>
+
+        <div class="tab-panel">
+          <p>Attempt to seize and restrain a target no more than one size larger than you. Make a <strong>Strength (Athletics)</strong> roll against the target's Difficulty.</p>
+          <ul>
+            <li>On a success, the target gains the Immobilised condition</li>
+            <li>You may move a grappled target by dragging or lifting them — unless they are at least two sizes smaller than you, your speed is halved</li>
+            <li>Another Hero may contest using Agility (Coordination)</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel">
+          <p>Make an <strong>Agility (Stealth)</strong> roll. While Hidden, Adversaries must rely on other senses to locate you if their passive perception is lower than your result.</p>
+          <ul>
+            <li>If found, attacks against you have Advantage</li>
+            <li>If you attack a target that cannot see you, your attack has Advantage. Your position is revealed after the attack.</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel">
+          <p>Attempt to sway an NPC or Adversary through words, presence, or intent. Describe how you approach them. The GM determines their stance:</p>
+          <ul>
+            <li><strong>Willing:</strong> Your urging aligns with the target's desires — no roll necessary</li>
+            <li><strong>Unwilling:</strong> Your urging is repugnant or counter to their alignment — they don't comply without a roll</li>
+            <li><strong>Hesitant:</strong> They need convincing — make an appropriate action roll. Difficulty is 12 + the target's Intelligence modifier</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel">
+          <p>Make a <strong>Strength (Athletics)</strong> roll against the target's Difficulty. On a success, push the target 1.5 metres in a direction you choose or knock them Prone.</p>
+          <ul>
+            <li>If the target is smaller than you: roll with Advantage</li>
+            <li>If the target is larger than you: roll with Disadvantage</li>
+            <li>You cannot shove a target more than two sizes larger than you</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel">
+          <p>Make a <strong>Presence (Skulduggery)</strong> roll against the target's Difficulty. On a success, take the chosen item without alerting the target. On a failure, the attempt is noticed or leaves clear suspicion.</p>
+          <ul>
+            <li>If the target is distracted or unaware: roll with Advantage</li>
+            <li>If the item is secured, concealed, or closely guarded: roll with Disadvantage</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel">
+          <p>Take a moment to observe, recall, or analyse. Make an Intelligence roll or another relevant skill (as determined by the GM) to uncover useful information.</p>
+          <table>
+            <thead><tr><th>Skill</th><th>Information</th></tr></thead>
+            <tbody>
+              <tr><td>Astrogation</td><td>Star maps, hyperspace lanes, ship models, galaxy phenomena</td></tr>
+              <tr><td>History</td><td>Historic events and people, ancient civilisations, wars, creatures</td></tr>
+              <tr><td>Investigation</td><td>Traps, ciphers, and riddles</td></tr>
+              <tr><td>Religion</td><td>Force sects, religious groups, symbols, deities, prophecies</td></tr>
+              <tr><td>Technology</td><td>Systems information, droids, repairs, general operations</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manoeuvres -->
+    <section id="manoeuvres" class="rule-section">
+      <h2 class="section-title">Manoeuvres</h2>
+      <p>When a move does not require an action roll, it's known as a manoeuvre. You can make as many manoeuvres as makes sense narratively. Some require Willpower.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card__title">Disengage</div>
+          <p>Mark off 1 Willpower to disengage from Adversaries in melee engagement range. When you attempt to move away, you do not trigger an opportunity attack.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Object Interaction</div>
+          <p>You can interact with or manipulate an object in Close range — like unlocking a door with a key or picking up credits from a fallen Crime Lord.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Reload</div>
+          <p>Some weapons have ammunition or power cells that need reloading. You can reload from your inventory or within Close range.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Stand Up</div>
+          <p>If you're knocked Prone, mark off 1 Willpower to stand back to your feet.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Swap Weapon</div>
+          <p>Stowing or drawing your primary or secondary weapon is free. To use any other weapon, swap it with your primary or secondary using this manoeuvre.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Use an Item</div>
+          <p>During combat, you can use an object — from applying a med pac to splicing into a terminal with a data spike. You can also throw a non-weapon object.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trigger Moves -->
+    <section id="trigger-moves" class="rule-section">
+      <h2 class="section-title">Trigger Moves</h2>
+      <p>When you are not in Focus, certain moments may present an opportunity to act. These are called Trigger moves.</p>
+      <p>When a Trigger occurs, you may immediately act by marking off <strong>1 Willpower slot</strong>, unless stated otherwise. You can do this as often as you can afford to pay the cost.</p>
+      <p>If a Trigger move requires an action roll, resolve it as a normal action roll. Balance and Despair apply — you may clear or mark off further Willpower depending on the outcome.</p>
+
+      <h3 class="section-subtitle">Opportunity Attack</h3>
+      <p>You can make an opportunity attack when an Adversary leaves Close range, or Near range if your weapon allows. Make an attack roll against the provoking target. The attack resolves before they leave your reach.</p>
+
+      <h3 class="section-subtitle">Ready Reaction</h3>
+      <p>While in Focus, you prepare a specific action and define the trigger that will cause it to occur. When that trigger happens, you may carry out the readied action. If the action requires a roll, resolve it as normal.</p>
+    </section>
+
+    <!-- Rituals -->
+    <section id="rituals" class="rule-section">
+      <h2 class="section-title">Rituals</h2>
+      <p>Rituals are special actions that unfold over time. You may begin a Ritual when you take the Focus, and some Rituals may continue across multiple turns.</p>
+      <p>Rituals resolve in one of two ways:</p>
+      <ul>
+        <li><strong>Countdown Rituals:</strong> A ticking clock that advances with every roll, determined by the GM</li>
+        <li><strong>Target Score Rituals:</strong> A running total of progress built up over several rolls</li>
+      </ul>
+
+      <h3 class="section-subtitle">Target Score Rituals</h3>
+      <p>A Target Score Ritual often represents research, repairs, diagnostics, construction, brute-forcing entry, or extended mystical or technological procedures.</p>
+      <ul>
+        <li><strong>Tool Proficiency:</strong> If proficient in the tool or kit used, add +1d6 to the roll. With expertise, add +2d6. Without the proper tool, you have a −12 penalty.</li>
+        <li><strong>Working Together:</strong> At the GM's discretion, multiple Heroes may contribute to the same Ritual, each adding progress when they take the Focus.</li>
+      </ul>
+    </section>
+
+    <!-- Saving Rolls -->
+    <section id="saving-rolls" class="rule-section">
+      <h2 class="section-title">Saving Rolls</h2>
+      <p>A saving roll is made to resist danger — toxins, hostile powers, or environmental hazards. You do not choose to make a saving roll. The situation calls for it.</p>
+
+      <p>When required, make a saving roll using your Dyad Dice, adding the relevant modifier. Compare the total to the Difficulty. On a success, you resist. On a failure, the effect takes hold.</p>
+
+      <div class="grid-2" style="margin-top:var(--space-4);">
+        <div class="card">
+          <div class="card__title">Strength</div>
+          <p>Resist being knocked Prone or physically overpowered.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Agility</div>
+          <p>Avoid an explosion, hazard, or sudden environmental danger.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Force</div>
+          <p>Resist mental influence, psychic attacks, or Force-based effects.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Resilience</div>
+          <p>Endure poison, disease, environmental extremes, or physical punishment over time.</p>
+        </div>
+      </div>
+
+      <h3 class="section-subtitle">Passive Difficulties</h3>
+      <p>Passive Difficulties represent a constant level of awareness or resistance, used when a Hero is not actively making a roll. They set a baseline difficulty for others attempting to act against you.</p>
+
+      <table style="margin-top:var(--space-4);">
+        <thead><tr><th>Passive</th><th>Calculation</th><th>Used When</th></tr></thead>
+        <tbody>
+          <tr><td>Passive Perception</td><td>12 + Perception modifier</td><td>Others attempt to hide from you</td></tr>
+          <tr><td>Passive Insight</td><td>12 + Insight modifier (or Force for Force-based effects)</td><td>Others attempt to deceive or influence you</td></tr>
+          <tr><td>Passive Force</td><td>12 + Force modifier</td><td>Others attempt to influence your thoughts through the Force</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+  </article>
+</div>
+
+<div id="site-footer-mount"></div>
+<script src="js/components.js"></script>
+</body>
+</html>

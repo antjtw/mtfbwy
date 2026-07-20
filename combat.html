@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combat — MTFBYW</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+<div id="site-header-mount"></div>
+
+<div class="page-wrap">
+
+  <aside class="sidebar">
+    <div class="sidebar-group">
+      <span class="sidebar-label">Making Attacks</span>
+      <a href="#making-an-attack" class="sidebar-link">Making an Attack</a>
+      <a href="#damage-types"     class="sidebar-link">Damage Types</a>
+      <a href="#resistances"      class="sidebar-link">Resistances</a>
+      <a href="#armour-damage"    class="sidebar-link">Armour &amp; Damage</a>
+    </div>
+    <div class="sidebar-group">
+      <span class="sidebar-label">The Battlefield</span>
+      <a href="#range-aoe"        class="sidebar-link">Range &amp; AoE</a>
+      <a href="#cover"            class="sidebar-link">Cover</a>
+      <a href="#movement"         class="sidebar-link">Movement</a>
+      <a href="#starships"        class="sidebar-link">Starship Encounters</a>
+    </div>
+    <div class="sidebar-group">
+      <span class="sidebar-label">Conditions &amp; Death</span>
+      <a href="#conditions"       class="sidebar-link">Conditions</a>
+      <a href="#death"            class="sidebar-link">Death</a>
+      <a href="#returning"        class="sidebar-link">Returning from Death</a>
+    </div>
+  </aside>
+
+  <article class="content">
+
+    <header class="page-hero">
+      <span class="page-hero__eyebrow">Chapter 6</span>
+      <h1 class="page-hero__title"><em>Combat</em></h1>
+      <p class="page-hero__lead">When the blasters come out and the lightsabers ignite, the galaxy hits back. Here's how attacks, damage, conditions, and death play out at the table.</p>
+    </header>
+
+    <!-- Making an Attack -->
+    <section id="making-an-attack" class="rule-section">
+      <h2 class="section-title">Making an Attack</h2>
+      <p>When you take the Attack action, you make an action roll against a target to inflict harm.</p>
+
+      <div class="grid-2">
+        <div class="card card--feature">
+          <div class="card__title">Ranged Attacks</div>
+          <p>Target an enemy at a distance — firing a blaster, throwing a weapon, or projecting a power. Use your <strong>Agility (AGI)</strong> trait modifier as the attack bonus.</p>
+          <p>Ranged weapons have an optimal range:</p>
+          <ul>
+            <li>Disadvantage if the target is beyond optimal range</li>
+            <li>Disadvantage if the target is within Close range</li>
+            <li>Automatic miss if the target is more than one range step beyond the weapon's optimal range</li>
+          </ul>
+        </div>
+        <div class="card card--feature">
+          <div class="card__title">Melee Attacks</div>
+          <p>Target an enemy within Close range. Use your <strong>Strength (STR)</strong> trait modifier as the attack bonus. These attacks use hand-held weapons, improvised objects, unarmed strikes, or natural weapons.</p>
+        </div>
+      </div>
+
+      <h3 class="section-subtitle">Attacking Against the Unseen</h3>
+      <ul>
+        <li>If you attack a target you cannot see, roll with Disadvantage. If the target is not in the location you chose, the attack misses.</li>
+        <li>If a target cannot see you, your attacks against it have Advantage</li>
+        <li>If you are hidden when you attack, your position is revealed after the attack resolves</li>
+      </ul>
+
+      <h3 class="section-subtitle">Burden (Hand Requirements)</h3>
+      <table>
+        <thead><tr><th>Burden</th><th>Rules</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Two-Handed</strong></td><td>Requires both hands. You cannot hold another object requiring a hand.</td></tr>
+          <tr><td><strong>One-Handed</strong></td><td>Can be paired with another one-handed weapon or held alongside another object.</td></tr>
+          <tr><td><strong>Versatile</strong></td><td>Can be used in one or two hands. Gains listed benefits when used two-handed.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Damage Types -->
+    <section id="damage-types" class="rule-section">
+      <h2 class="section-title">Damage Types</h2>
+      <p>Every weapon, power, and hazard in the galaxy deals damage of at least one type. Each type has a three-letter abbreviation.</p>
+
+      <table>
+        <thead>
+          <tr><th>Type</th><th>Abbv.</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Cold</strong></td><td><span class="die-pill">CLD</span></td><td>Biting frost and plunging temperatures. Cryo-grenades, frozen worlds, the void of space.</td></tr>
+          <tr><td><strong>Energy</strong></td><td><span class="die-pill">NRG</span></td><td>Searing bolts of raw power. Blasters, plasma weapons, and most ranged firepower across the galaxy.</td></tr>
+          <tr><td><strong>Fire</strong></td><td><span class="die-pill">FIR</span></td><td>Flames, heat, and burning fuel. Flamethrowers, ignited slicks, exploding fuel cells.</td></tr>
+          <tr><td><strong>Healing</strong></td><td><span class="die-pill die-pill--success">HLG</span></td><td>The opposite of harm — patches wounds and restores Hit Point slots rather than marking them.</td></tr>
+          <tr><td><strong>Ichor</strong></td><td><span class="die-pill die-pill--despair">ICH</span></td><td>A dark, devouring corruption that gnaws at body and spirit. Sith alchemy and twisted Magick.</td></tr>
+          <tr><td><strong>Ion</strong></td><td><span class="die-pill">ION</span></td><td>Disruptive pulses that tear through circuits and shielding. Devastating to droids and tech.</td></tr>
+          <tr><td><strong>Lightning</strong></td><td><span class="die-pill">LGT</span></td><td>Crackling arcs of electricity. Stun batons, overloaded power cells, and Force lightning.</td></tr>
+          <tr><td><strong>Psychic</strong></td><td><span class="die-pill die-pill--despair">PSY</span></td><td>A direct strike against the mind. Psychic intrusion, mental attacks, and Force-driven assault.</td></tr>
+          <tr><td><strong>Physical</strong></td><td><span class="die-pill">PHY</span></td><td>Bone, blade, and blunt force. Vibroweapons, fists, falling debris, anything kinetic.</td></tr>
+          <tr><td><strong>Poison</strong></td><td><span class="die-pill">PSN</span></td><td>Toxins, venoms, and contaminants in the blood, lungs, or gut. Often lingers after the hit lands.</td></tr>
+          <tr><td><strong>Sonic</strong></td><td><span class="die-pill">SNC</span></td><td>Punishing waves of sound. Sonic weapons, shockblasts, and the rupture of pressurised hulls.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout--success" style="margin-top:var(--space-4);">
+        <div class="callout__icon">💚</div>
+        <div class="callout__body">
+          <div class="callout__title">Healing</div>
+          <p>Healing isn't damage — but it works the same way. Healing rolls follow the same dice and threshold rules as damage rolls. Instead of marking Hit Point slots, you clear them.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resistances -->
+    <section id="resistances" class="rule-section">
+      <h2 class="section-title">Resistances, Immunities &amp; Vulnerabilities</h2>
+
+      <div class="grid-3">
+        <div class="card card--feature">
+          <div class="card__title">Resistant</div>
+          <p>Damage of that type is halved before you compare it to your Hit Point thresholds. Apply resistance first, then spend armour slots. Multiple resistances to the same damage type don't stack.</p>
+        </div>
+        <div class="card card--success">
+          <div class="card__title">Immune</div>
+          <p>Damage of that type is ignored entirely. No threshold check, no slots marked, no roll to make.</p>
+        </div>
+        <div class="card card--warning">
+          <div class="card__title">Vulnerable</div>
+          <p>Damage of that type is doubled before you compare it to your Hit Point thresholds.</p>
+        </div>
+      </div>
+
+      <h3 class="section-subtitle">Mixed Damage</h3>
+      <p>Some attacks deal more than one type at once — a flaming vibroblade might deal Physical and Fire. You only benefit from resistance or immunity if you have it against <strong>every</strong> damage type in the attack. Vulnerability to any type in the mix still applies, and the full damage is doubled before thresholds are checked.</p>
+    </section>
+
+    <!-- Armour and Damage -->
+    <section id="armour-damage" class="rule-section">
+      <h2 class="section-title">Armour &amp; Damage</h2>
+      <p>When you take damage, you may expend <strong>1 armour slot</strong> to reduce the damage threshold by one step (e.g., Severe → Major). You cannot expend multiple slots at once — only one slot may be used each time you take damage.</p>
+
+      <table>
+        <thead><tr><th>Name</th><th>Threshold</th><th>HP Marked</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Minor</td><td>1–8</td><td>Mark 1</td><td></td></tr>
+          <tr><td>Major</td><td>9–17</td><td>Mark 2</td><td>Determined by species</td></tr>
+          <tr><td>Severe</td><td>18–35</td><td>Mark 3</td><td>Double Major damage</td></tr>
+          <tr><td>Massive</td><td>36+</td><td>Mark 4</td><td>Double Severe damage</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout--danger">
+        <div class="callout__icon">💀</div>
+        <div class="callout__body">
+          <div class="callout__title">Instant Death</div>
+          <p>If a Hero takes damage equal to twice their Massive damage threshold in a single hit, they die instantly.</p>
+        </div>
+      </div>
+
+      <h3 class="section-subtitle">Armour Slots</h3>
+      <ul>
+        <li>When all slots are filled, the armour is <strong>broken</strong> — it must be repaired during downtime before it can be used again</li>
+        <li>Equipping new armour refreshes your armour slots to the new maximum; the old armour is spent until repaired</li>
+        <li>Being unarmoured provides no bonus or penalty — you cannot use armour slots unless you have an armour score</li>
+        <li>If a power or ability grants a temporary armour score, you also gain extra slots equal to the temporary score. When the effect ends, those slots are removed</li>
+      </ul>
+    </section>
+
+    <!-- Range and AoE -->
+    <section id="range-aoe" class="rule-section">
+      <h2 class="section-title">Range &amp; Area of Effect</h2>
+      <p>In terrestrial combat, range is an abstraction used to judge distance, movement, and areas of effect. Ranges may be estimated narratively, measured roughly, or mapped to a 1.5m grid if needed.</p>
+
+      <table>
+        <thead><tr><th>Range</th><th>Distance</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Close</strong></td><td>Within arm's reach. Around 1.5m or adjacent squares.</td></tr>
+          <tr><td><strong>Near</strong></td><td>Just beyond reach. Around 3m or two squares away.</td></tr>
+          <tr><td><strong>Standard</strong></td><td>Typical range for short-ranged weapons. Around 9m or six squares away.</td></tr>
+          <tr><td><strong>Far</strong></td><td>Around 12 squares away or 18m.</td></tr>
+          <tr><td><strong>Distant</strong></td><td>Typical range for most ranged weapons. Around 45m.</td></tr>
+          <tr><td><strong>Extreme</strong></td><td>Long-range engagements. Around 300m.</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="section-subtitle">Movement</h3>
+      <p>When you make an action roll, you may also move within Close range as part of that action. If you want to move beyond Close range, or to a location that is difficult to access, make an <strong>Athletics (STR)</strong> roll to reposition. The GM sets the Difficulty based on the situation.</p>
+    </section>
+
+    <!-- Cover -->
+    <section id="cover" class="rule-section">
+      <h2 class="section-title">Cover</h2>
+      <table>
+        <thead><tr><th>Cover</th><th>Perceived Coverage</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td><strong>No Cover</strong></td><td>Less than 50%</td><td>None</td></tr>
+          <tr><td><strong>Soft Cover</strong></td><td>Around 50% (waist-high crates, trees)</td><td>+3 to Evasion</td></tr>
+          <tr><td><strong>Hard Cover</strong></td><td>Around 80% (barricades, doorways, rubble)</td><td>+7 to Evasion, Advantage on Stealth and Skulduggery</td></tr>
+          <tr><td><strong>Total Cover</strong></td><td>100%</td><td>Impossible to hit with standard attacks; area-of-effect may still apply at GM's call</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout--despair" style="margin-top:var(--space-4);">
+        <div class="callout__icon">🌑</div>
+        <div class="callout__body">
+          <div class="callout__title">Cover &amp; the Dyad Dice</div>
+          <p>Combat isn't static. Cover shifts and breaks under fire. A Balance result means cover holds firm. A Despair result may cause cover to splinter, collapse, or fail at the GM's discretion — a crate explodes, a wall begins to crumble. The GM may spend Despair tokens to turn cover into a complication or danger.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Starship Encounters -->
+    <section id="starships" class="rule-section">
+      <h2 class="section-title">Starship Encounters</h2>
+      <p>Space encounters follow the same core rules as standard encounters. The flow of Focus, how actions are taken, and how rolls are resolved remain unchanged. The difference is scale and context.</p>
+
+      <h3 class="section-subtitle">Range Bands</h3>
+      <table>
+        <thead><tr><th>Range</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Close</strong></td><td>Dogfighting distance, visual contact</td></tr>
+          <tr><td><strong>Short</strong></td><td>In range, but attacks may suffer Disadvantage</td></tr>
+          <tr><td><strong>Medium</strong></td><td>Beyond visual range, requires sensors</td></tr>
+          <tr><td><strong>Long</strong></td><td>Too far to engage without closing</td></tr>
+          <tr><td><strong>Extreme</strong></td><td>Orbital or interplanetary scale</td></tr>
+        </tbody>
+      </table>
+      <p>When a pilot takes Focus, they may use a manoeuvre to move one range band closer or farther.</p>
+
+      <h3 class="section-subtitle">Relative Positioning</h3>
+      <p>At Close range, positioning becomes important. Positioning can only be changed at Close range — at greater distances, it is abstracted into range alone.</p>
+      <table>
+        <thead><tr><th>Position</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Ahead</td><td>Directly in front</td></tr>
+          <tr><td>Trailing</td><td>Behind, in pursuit</td></tr>
+          <tr><td>Above</td><td>Holding the high position</td></tr>
+          <tr><td>Below</td><td>Beneath or rising</td></tr>
+          <tr><td>Port</td><td>Left side</td></tr>
+          <tr><td>Starboard</td><td>Right side</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Conditions -->
+    <section id="conditions" class="rule-section">
+      <h2 class="section-title">Conditions</h2>
+      <p>Conditions represent persistent mechanical states affecting a Hero, adversary, or NPC.</p>
+
+      <div class="condition-card">
+        <div class="condition-card__name">Dying</div>
+        <div class="condition-card__meta">Duration: Until recovered | Recovery: Restore at least 1 HP slot through healing or an effect</div>
+        <p>Once all Hit Point slots are depleted, you gain the Dying condition. You fall Prone, relying solely on your Willpower to survive.</p>
+        <ul>
+          <li>All Willpower costs and penalties are doubled</li>
+          <li>If you take the Focus while Dying, speed is halved (a crawl unless you stand) and all action rolls are made with Disadvantage</li>
+          <li>If you take damage while Dying, mark Willpower slots instead of HP slots (you may still use armour)</li>
+        </ul>
+      </div>
+
+      <div class="condition-card">
+        <div class="condition-card__name">Frightened</div>
+        <div class="condition-card__meta">Duration: Until the source of fear is out of sight | Recovery: Successful Presence Saving Roll when you next take the Focus</div>
+        <p>Terror grips your spirit. You have Disadvantage on Dyad Dice rolls while the source of your fear is within sight, and you cannot willingly move closer to it.</p>
+      </div>
+
+      <div class="condition-card">
+        <div class="condition-card__name">Hidden</div>
+        <div class="condition-card__meta">Duration: While unseen | Recovery: Making a loud or visible move, attacking, or being discovered</div>
+        <p>You're concealed from sight and detection. You cannot be directly targeted by attacks or abilities until revealed. Attacks made from hiding have Advantage.</p>
+      </div>
+
+      <div class="condition-card">
+        <div class="condition-card__name">Ignited</div>
+        <div class="condition-card__meta">Duration: Persists until extinguished | Recovery: Mark off 1 Willpower to submerge or douse yourself</div>
+        <p>Flames engulf you. Each time you take the Focus, take <span class="die-pill">1d6 FIR</span> damage.</p>
+      </div>
+
+      <div class="condition-card">
+        <div class="condition-card__name">Influenced</div>
+        <div class="condition-card__meta">Duration: As stated by the influencing effect | Recovery: When the influence ends or is dispelled</div>
+        <p>Your will is not your own. You regard the influencer as an ally and will not willingly harm them. Depending on the power or ability, you may follow simple commands or act in their interest.</p>
+      </div>
+
+      <div class="condition-card">
+        <div class="condition-card__name">Immobilised</div>
+        <div class="condition-card__meta">Duration: Countdown 6 or until freed | Recovery: You or an ally mark off a Willpower to release you</div>
+        <p>You are locked in place. Your speed becomes 0, and you cannot benefit from movement bonuses until the effect ends.</p>
+      </div>
+
+      <div class="condition-card">
+        <div class="condition-card__name">Ionised</div>
+        <div class="condition-card__meta">Droids and cybernetic beings only. Duration: Countdown 6 or after a short rest | Recovery: Mark off 1 Willpower to remove</div>
+        <p>You're disrupted by electrical feedback. You are either Stunned or Weakened, depending on the severity of the ion surge.</p>
+      </div>
+
+      <div class="condition-card">
+        <div class="condition-card__name">Prone</div>
+        <div class="condition-card__meta">Duration: Until you stand | Recovery: Use the Stand Up manoeuvre</div>
+        <p>You've hit the ground. Melee attacks against you have Advantage. Ranged attacks against you have Disadvantage. Your own attacks are made with Disadvantage.</p>
+      </div>
+
+      <div class="condition-card">
+        <div class="condition-card__name">Stunned</div>
+        <div class="condition-card__meta">Duration: Countdown 6 or as specified | Recovery: Ends automatically or when you receive aid</div>
+        <p>Your body seizes and your mind reels. You cannot take the Focus until the condition ends.</p>
+      </div>
+
+      <div class="condition-card">
+        <div class="condition-card__name">Unconscious</div>
+        <div class="condition-card__meta">Duration: Until short or full rest and recovering at least 1 Willpower slot</div>
+        <p>You fall still and silent. You drop anything held, fall Prone, and cannot take the Focus. Attack rolls against you have Advantage. Melee hits are treated as Minor Critical hits.</p>
+      </div>
+
+      <div class="condition-card">
+        <div class="condition-card__name">Weakened</div>
+        <div class="condition-card__meta">Duration: Countdown 6 or after a short rest | Recovery: Short rest or through aid</div>
+        <p>Your strength falters and precision slips. You have Disadvantage on all action rolls and your speed is halved.</p>
+      </div>
+    </section>
+
+    <!-- Death -->
+    <section id="death" class="rule-section">
+      <h2 class="section-title">Death</h2>
+      <p>Death happens when all Hit Points and all Willpower slots are depleted. The character collapses and cannot take further actions except death moves.</p>
+
+      <div class="callout callout--balance">
+        <div class="callout__icon">☯️</div>
+        <div class="callout__body">
+          <div class="callout__title">Death Moves</div>
+          <p>When you die, you may take one of three death moves. One allows you to cling onto life at a cost. Another allows you to go out in a blaze of glory. The third puts your fate in the hands of your dice.</p>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-top:var(--space-6);">
+        <div class="card card--feature">
+          <div class="card__title">Cling to Life</div>
+          <p>You fall unconscious until it is safe to be revived (usually after combat). Once revived, permanently mark off your highest 3 Willpower slots, reducing your max Willpower capacity.</p>
+          <p>If all Willpower slots are permanently marked off, you can no longer cling to life. You die and become one with the Force.</p>
+        </div>
+        <div class="card card--despair">
+          <div class="card__title">Blaze of Glory</div>
+          <p>You may take one final heroic action at no cost. This action automatically counts as a Major Critical Success. Afterward, you have a moment to say farewell before becoming one with the Force.</p>
+        </div>
+        <div class="card card--feature">
+          <div class="card__title">Trust in the Force</div>
+          <p>Roll your Dyad Dice:</p>
+          <ul>
+            <li>If the Balance die is higher: your character clears all HP and WP slots</li>
+            <li>If the Despair die is higher: your character crosses through the veil and becomes one with the Force</li>
+            <li>If the dice show matching results: your character returns to their feet, all HP and WP cleared</li>
+          </ul>
+        </div>
+      </div>
+
+      <p style="margin-top:var(--space-4);">If your character dies, work with the GM before the next session to create a new character at the current level of the rest of the party.</p>
+    </section>
+
+    <!-- Returning from Death -->
+    <section id="returning" class="rule-section">
+      <h2 class="section-title">Returning from Death</h2>
+
+      <div class="card" style="margin-bottom:var(--space-4);">
+        <div class="card__title">Revive</div>
+        <p>A character that has been dead for a short duration may be revived by a power or ability that specifically states the time limit of death it can affect. Only abilities, Force powers, or technologies that explicitly mention revival after death can bring a character back.</p>
+      </div>
+
+      <div class="card card--warning" style="margin-bottom:var(--space-4);">
+        <div class="card__title">Resurrect</div>
+        <p>Resurrection requires significant effort and often great cost. When resurrected, permanently mark off <strong>6 Willpower slots</strong> (−6 penalty to all rolls). This stacks each time you are resurrected.</p>
+        <p>Once all Willpower slots are permanently marked off, you cannot be resurrected again and die permanently. The GM may allow opportunities to reclaim permanently marked off Willpower slots.</p>
+      </div>
+
+      <div class="card" style="margin-bottom:var(--space-4);">
+        <div class="card__title">Consciousness Transfer</div>
+        <p>Lifeforms may transfer essence into another body, or droids may restore a data backup.</p>
+        <ul>
+          <li><strong>Essence Transfer:</strong> The host may resist, causing issues or failure. A Difficulty Challenge may also be required.</li>
+          <li><strong>Data Bank Backup (Droids):</strong> Data banks may be corrupted, causing patchy or aberrant memories. Unwilling recipients may resist backup installation.</li>
+        </ul>
+      </div>
+    </section>
+
+  </article>
+</div>
+
+<div id="site-footer-mount"></div>
+<script src="js/components.js"></script>
+</body>
+</html>

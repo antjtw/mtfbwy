@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a Hero — MTFBYW</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/creation.css">
+</head>
+<body class="creation-body">
+
+<!-- Compact header for creation flow -->
+<header class="creation-header">
+  <a href="index.html" class="auth-logo" style="font-family:var(--font-display);font-weight:900;font-size:18px;letter-spacing:0.08em;color:var(--color-text);text-decoration:none;text-transform:uppercase;">MTF<span style="color:var(--color-text-gold);">B</span>WY</a>
+  <div class="creation-header__title">
+    <span class="creation-header__label">Create your Hero</span>
+    <span class="creation-header__step" id="step-label">Step 1 of 5</span>
+  </div>
+  <a href="index.html" class="creation-header__exit" aria-label="Exit creation">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    Exit
+  </a>
+</header>
+
+<div class="creation-shell">
+
+  <!-- ── Left stepper rail ── -->
+  <nav class="creation-stepper" aria-label="Creation steps">
+    <ol class="stepper-list">
+      <li class="stepper-item active"    data-step="1" onclick="Creation.goToStep(1)">
+        <span class="stepper-marker"><span class="stepper-num">1</span><svg class="stepper-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+        <span class="stepper-label">Species</span>
+      </li>
+      <li class="stepper-item" data-step="2" onclick="Creation.goToStep(2)">
+        <span class="stepper-marker"><span class="stepper-num">2</span><svg class="stepper-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+        <span class="stepper-label">Origin</span>
+      </li>
+      <li class="stepper-item" data-step="3" onclick="Creation.goToStep(3)">
+        <span class="stepper-marker"><span class="stepper-num">3</span><svg class="stepper-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+        <span class="stepper-label">Path</span>
+      </li>
+      <li class="stepper-item" data-step="4" onclick="Creation.goToStep(4)">
+        <span class="stepper-marker"><span class="stepper-num">4</span><svg class="stepper-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+        <span class="stepper-label">Career</span>
+      </li>
+      <li class="stepper-item" data-step="5" onclick="Creation.goToStep(5)">
+        <span class="stepper-marker"><span class="stepper-num">5</span><svg class="stepper-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+        <span class="stepper-label">Finalise</span>
+      </li>
+    </ol>
+
+    <!-- Summary of selections -->
+    <div class="stepper-summary" id="stepper-summary">
+      <div class="summary-item" id="sum-species" style="display:none">
+        <span class="summary-label">Species</span>
+        <span class="summary-value" id="sum-species-val">—</span>
+      </div>
+      <div class="summary-item" id="sum-origin" style="display:none">
+        <span class="summary-label">Origin</span>
+        <span class="summary-value" id="sum-origin-val">—</span>
+      </div>
+      <div class="summary-item" id="sum-path" style="display:none">
+        <span class="summary-label">Path</span>
+        <span class="summary-value" id="sum-path-val">—</span>
+      </div>
+      <div class="summary-item" id="sum-career" style="display:none">
+        <span class="summary-label">Career</span>
+        <span class="summary-value" id="sum-career-val">—</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Main content area ── -->
+  <main class="creation-main" id="creation-main">
+
+    <!-- STEP 1: Species -->
+    <div class="creation-step active" id="step-1">
+      <div class="creation-step__header">
+        <h1 class="creation-step__title">Choose your Species</h1>
+        <p class="creation-step__desc">Your species defines your biology, your culture, and the abilities you carry into the galaxy. This choice cannot be changed later.</p>
+      </div>
+
+      <div class="creation-grid" id="species-grid">
+
+        <button class="creation-card" data-value="Bith" onclick="Creation.select(this,'species')">
+          <div class="creation-card__body">
+            <div class="creation-card__glyph">🎵</div>
+            <div class="creation-card__name">Bith</div>
+            <div class="creation-card__tag">INT +2</div>
+            <p class="creation-card__desc">Large-headed aliens with a knack for science and music. Analytical and perceptive.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Cerean" onclick="Creation.select(this,'species')">
+          <div class="creation-card__body">
+            <div class="creation-card__glyph">🧠</div>
+            <div class="creation-card__name">Cerean</div>
+            <div class="creation-card__tag">INT +1</div>
+            <p class="creation-card__desc">Massive coned craniums housing binary brains. Long-lived, diplomatic, tireless.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Human" onclick="Creation.select(this,'species')">
+          <div class="creation-card__body">
+            <div class="creation-card__glyph">⭐</div>
+            <div class="creation-card__name">Human</div>
+            <div class="creation-card__tag">Any trait +1</div>
+            <p class="creation-card__desc">Adaptable and ambitious. Found everywhere, shaped by where they're from.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Rodian" onclick="Creation.select(this,'species')">
+          <div class="creation-card__body">
+            <div class="creation-card__glyph">🎯</div>
+            <div class="creation-card__name">Rodian</div>
+            <div class="creation-card__tag">AGI +1</div>
+            <p class="creation-card__desc">Reptilian hunters with enhanced senses. Born trackers, quick and light-sensitive.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Twi'lek" onclick="Creation.select(this,'species')">
+          <div class="creation-card__body">
+            <div class="creation-card__glyph">🪷</div>
+            <div class="creation-card__name">Twi'lek</div>
+            <div class="creation-card__tag">PRE +1 · AGI +1</div>
+            <p class="creation-card__desc">Graceful and persuasive. Their lekku communicate volumes without a word.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Wookiee" onclick="Creation.select(this,'species')">
+          <div class="creation-card__body">
+            <div class="creation-card__glyph">🌲</div>
+            <div class="creation-card__name">Wookiee</div>
+            <div class="creation-card__tag">STR +2</div>
+            <p class="creation-card__desc">Shaggy giants, intelligent and fiercely loyal. Speak only Shyriiwook.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Pantoran" onclick="Creation.select(this,'species')">
+          <div class="creation-card__body">
+            <div class="creation-card__glyph">❄️</div>
+            <div class="creation-card__name">Pantoran</div>
+            <div class="creation-card__tag">PRE +1 · INT +1</div>
+            <p class="creation-card__desc">Blue-skinned near-humans. Cold-adapted, prideful, natural negotiators.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Pkorian" onclick="Creation.select(this,'species')">
+          <div class="creation-card__body">
+            <div class="creation-card__glyph">🔴</div>
+            <div class="creation-card__name">Pkorian</div>
+            <div class="creation-card__tag">AGI +1</div>
+            <p class="creation-card__desc">Tall, red-skinned humanoids with two hearts. Isolated but perceptive.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card creation-card--more" onclick="window.location='species.html'">
+          <div class="creation-card__body">
+            <div class="creation-card__glyph">📖</div>
+            <div class="creation-card__name">More species</div>
+            <p class="creation-card__desc">Barabel, Evereni, Ikkrukkian, Pooba, Tynnan, Vintian, Droids, and more in the sourcebooks.</p>
+          </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- STEP 2: Origin -->
+    <div class="creation-step" id="step-2">
+      <div class="creation-step__header">
+        <h1 class="creation-step__title">Choose your Origin</h1>
+        <p class="creation-step__desc">Your origin represents your first steps into a larger world. These are the circumstances that forged you — they cannot be changed later.</p>
+      </div>
+
+      <div class="creation-grid creation-grid--wide">
+
+        <button class="creation-card" data-value="Abandoned" onclick="Creation.select(this,'origin')">
+          <div class="creation-card__body">
+            <div class="creation-card__name">Abandoned</div>
+            <div class="creation-card__tag">RES +1 · Survival</div>
+            <p class="creation-card__desc">Left behind to fend for yourself. <em>Survivor's Instinct:</em> once per short rest, reroll a failed Survival or Perception check.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Force Sensitive" onclick="Creation.select(this,'origin')">
+          <div class="creation-card__body">
+            <div class="creation-card__name">Force Sensitive</div>
+            <div class="creation-card__tag">FOR +1 · Insight · Force Powers</div>
+            <p class="creation-card__desc">The Force hums faintly within you — untaught but undeniable. Gain access to Basic Force Powers.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Hardened" onclick="Creation.select(this,'origin')">
+          <div class="creation-card__body">
+            <div class="creation-card__name">Hardened</div>
+            <div class="creation-card__tag">RES +1 · Investigation</div>
+            <p class="creation-card__desc">Life's cruelties taught you cunning and unbreakable will. <em>Street Smarts</em> in urban environments. <em>Indomitable Spirit</em> against influence.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Jedi Initiate" onclick="Creation.select(this,'origin')">
+          <div class="creation-card__body">
+            <div class="creation-card__name">Jedi Initiate</div>
+            <div class="creation-card__tag">FOR +1 · Negotiation · Force Powers</div>
+            <p class="creation-card__desc">Raised within the Jedi Temple, you know little life beyond its walls. Gain access to Basic Force Powers.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Optimist" onclick="Creation.select(this,'origin')">
+          <div class="creation-card__body">
+            <div class="creation-card__name">Optimist</div>
+            <div class="creation-card__tag">PRE +1 · Negotiation</div>
+            <p class="creation-card__desc">Sheltered beginnings left you hopeful, trusting, perhaps naïve. <em>Optimistic Courage:</em> add 1d4 to any action roll once per short rest. <em>Drawback</em> on deception reads.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Prospect" onclick="Creation.select(this,'origin')">
+          <div class="creation-card__body">
+            <div class="creation-card__name">Prospect</div>
+            <div class="creation-card__tag">AGI +1 · Athletics</div>
+            <p class="creation-card__desc">Once a hopeful recruit — trained but never fully proven. <em>Eager Initiate:</em> advantage on rolls when acting with allies nearby.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Survivor" onclick="Creation.select(this,'origin')">
+          <div class="creation-card__body">
+            <div class="creation-card__name">Survivor</div>
+            <div class="creation-card__tag">RES +1 · Insight or Perception</div>
+            <p class="creation-card__desc">Tragedy took everything, but not your will to live. <em>Tragic Resilience:</em> once per short rest, drop to 1 HP instead of 0.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Tribal" onclick="Creation.select(this,'origin')">
+          <div class="creation-card__body">
+            <div class="creation-card__name">Tribal</div>
+            <div class="creation-card__tag">PRE +1 · Perception + 1 bonus</div>
+            <p class="creation-card__desc">Born into ancient customs, you thrive through community and tradition. <em>Tribal Connection</em> with those who share your culture.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Witchborn" onclick="Creation.select(this,'origin')">
+          <div class="creation-card__body">
+            <div class="creation-card__name">Witchborn</div>
+            <div class="creation-card__tag">FOR +1 · Survival · Magick Powers</div>
+            <p class="creation-card__desc">Magick touched your birth, raised in cults or shaped by ichor. Gain access to the Basic Magick Powers.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- STEP 3: Path -->
+    <div class="creation-step" id="step-3">
+      <div class="creation-step__header">
+        <h1 class="creation-step__title">Choose your Path</h1>
+        <p class="creation-step__desc">Your Path is your Hero's core identity and source of power. You can branch into other Paths as you level up, but you cannot change where you began.</p>
+      </div>
+
+      <div class="creation-grid">
+
+        <button class="creation-card creation-card--path" data-value="Devout" onclick="Creation.select(this,'path')">
+          <div class="creation-card__body">
+            <div class="creation-card__path-tag" style="background:rgba(225,223,184,0.1);color:var(--color-text-gold);">AGI · FOR</div>
+            <div class="creation-card__name">Devout</div>
+            <div class="creation-card__tag">Focus · Devout Die · d4→d4→d4→d4</div>
+            <p class="creation-card__desc">Inspired by unwavering belief in the Force. Guardian — shields allies and defends the line.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card creation-card--path" data-value="Marauder" onclick="Creation.select(this,'path')">
+          <div class="creation-card__body">
+            <div class="creation-card__path-tag" style="background:rgba(253,110,110,0.1);color:var(--color-error);">STR · RES</div>
+            <div class="creation-card__name">Marauder</div>
+            <div class="creation-card__tag">Fury · +2 damage at level 1</div>
+            <p class="creation-card__desc">Crushes foes and thrives in battle's fury. Berserker or Tank — unstoppable and unrelenting.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card creation-card--path" data-value="Mystic" onclick="Creation.select(this,'path')">
+          <div class="creation-card__body">
+            <div class="creation-card__path-tag" style="background:rgba(154,215,176,0.1);color:var(--color-advantage);">FOR · RES</div>
+            <div class="creation-card__name">Mystic</div>
+            <div class="creation-card__tag">Force Casting · Mystic Die</div>
+            <p class="creation-card__desc">Sees hidden truths and shapes destiny through visions. Cosmic — vessel of the Force's will.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card creation-card--path" data-value="Sentinel" onclick="Creation.select(this,'path')">
+          <div class="creation-card__body">
+            <div class="creation-card__path-tag" style="background:rgba(225,223,184,0.1);color:var(--color-text-gold);">STR · FOR</div>
+            <div class="creation-card__name">Sentinel</div>
+            <div class="creation-card__tag">Force Casting · Sentinel Die · All kyber</div>
+            <p class="creation-card__desc">Precise strikes and powerful defences. Blademaster duels — parry and riposte mastery.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card creation-card--path" data-value="Sorcerer" onclick="Creation.select(this,'path')">
+          <div class="creation-card__body">
+            <div class="creation-card__path-tag" style="background:rgba(123,110,232,0.15);color:#9B8FF5;">FOR · PRE</div>
+            <div class="creation-card__name">Sorcerer</div>
+            <div class="creation-card__tag">Magick Casting · Sorcerer Die · Ichor</div>
+            <p class="creation-card__desc">Bends Magick to their will — risking all for ultimate power. Embalmed or Shaman.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card creation-card--path" data-value="Technologist" onclick="Creation.select(this,'path')">
+          <div class="creation-card__body">
+            <div class="creation-card__path-tag" style="background:rgba(225,223,184,0.08);color:var(--color-text-gold-sub);">AGI · INT</div>
+            <div class="creation-card__name">Technologist</div>
+            <div class="creation-card__tag">Tech Casting · Technologist Die</div>
+            <p class="creation-card__desc">Commands machines and tech. Artillerist, Polestar, Safety Net, or Skeleton Key.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card creation-card--path" data-value="Vanguard" onclick="Creation.select(this,'path')">
+          <div class="creation-card__body">
+            <div class="creation-card__path-tag" style="background:rgba(154,215,176,0.08);color:var(--color-advantage);">PRE · INT</div>
+            <div class="creation-card__name">Vanguard</div>
+            <div class="creation-card__tag">Assess · Marshal, Envoy, or Spymaster</div>
+            <p class="creation-card__desc">Turns a group into something greater than the sum of its parts. Leadership, intelligence, authority.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card creation-card--path" data-value="Wayfarer" onclick="Creation.select(this,'path')">
+          <div class="creation-card__body">
+            <div class="creation-card__path-tag" style="background:rgba(225,223,184,0.08);color:var(--color-text-gold-sub);">AGI · PRE</div>
+            <div class="creation-card__name">Wayfarer</div>
+            <div class="creation-card__tag">Tech Casting · All blasters</div>
+            <p class="creation-card__desc">Lives by wit and daring. Gunslinger or Operative — the galaxy's stars are their territory.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- STEP 4: Career -->
+    <div class="creation-step" id="step-4">
+      <div class="creation-step__header">
+        <h1 class="creation-step__title">Choose your Career</h1>
+        <p class="creation-step__desc">Your career provides starting equipment, special features, and proficiencies that define your livelihood. If you gain a proficiency you already have, you get Expertise instead.</p>
+      </div>
+
+      <div class="creation-grid creation-grid--wide">
+
+        <button class="creation-card" data-value="Bounty Hunter" onclick="Creation.select(this,'career')">
+          <div class="creation-card__body">
+            <div class="creation-card__name">Bounty Hunter</div>
+            <div class="creation-card__tag">Survival · Torturer's tools</div>
+            <p class="creation-card__desc"><em>Feared:</em> Advantage on Coercion. <em>Resourceful Hunter:</em> ensnare targets in an energy snare.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Freedom Fighter" onclick="Creation.select(this,'career')">
+          <div class="creation-card__body">
+            <div class="creation-card__name">Freedom Fighter</div>
+            <div class="creation-card__tag">Survival · Armourer's tools</div>
+            <p class="creation-card__desc"><em>Bolstered Resolve:</em> when reduced to 1 WP slot, regain WP equal to your PRE modifier once per Full Rest.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Jedi Knight" onclick="Creation.select(this,'career')">
+          <div class="creation-card__body">
+            <div class="creation-card__name">Jedi Knight</div>
+            <div class="creation-card__tag">Religion · Academic's tools · Force Powers</div>
+            <p class="creation-card__desc">Kyber weapon, Jedi robes (+2 Evasion). <em>Trained in the Jedi Arts:</em> access to Basic Force Powers.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Pilot" onclick="Creation.select(this,'career')">
+          <div class="creation-card__body">
+            <div class="creation-card__name">Pilot</div>
+            <div class="creation-card__tag">Piloting · Cartographer's tools</div>
+            <p class="creation-card__desc"><em>Skilled Pilot:</em> AGI to ship Evasion. <em>Port Familiar:</em> declare a contact at any starport once per Full Rest.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Scholar" onclick="Creation.select(this,'career')">
+          <div class="creation-card__body">
+            <div class="creation-card__name">Scholar</div>
+            <div class="creation-card__tag">History · Academic's tools</div>
+            <p class="creation-card__desc"><em>Sage Advice:</em> grant allies your proficiency bonus on a chosen skill roll once per hour.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card" data-value="Smuggler" onclick="Creation.select(this,'career')">
+          <div class="creation-card__body">
+            <div class="creation-card__name">Smuggler</div>
+            <div class="creation-card__tag">Skullduggery · Thieves' tools</div>
+            <p class="creation-card__desc"><em>Hidden Compartments:</em> Advantage concealing items. <em>Deceptive Charm:</em> reroll a failed Skullduggery once per Full Rest.</p>
+          </div>
+          <div class="creation-card__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </button>
+
+        <button class="creation-card creation-card--more" onclick="window.location='careers.html'">
+          <div class="creation-card__body">
+            <div class="creation-card__glyph">📖</div>
+            <div class="creation-card__name">More careers</div>
+            <p class="creation-card__desc">Criminal, DJ, Droidsmith, Force Scholar, Gladiator, Jedi Wayseeker, Labourer, Meknek, Outlaw, Treasure Hunter.</p>
+          </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- STEP 5: Finalise -->
+    <div class="creation-step" id="step-5">
+      <div class="creation-step__header">
+        <h1 class="creation-step__title">Finalise your Hero</h1>
+        <p class="creation-step__desc">Your Hero is nearly ready. Assign your trait modifiers, calculate your thresholds and evasion, then transfer everything to your Hero sheet.</p>
+      </div>
+
+      <div class="creation-summary-panel">
+
+        <div class="csummary-block">
+          <h2 class="csummary-title">Your selections</h2>
+          <div class="csummary-row"><span class="csummary-label">Species</span><span class="csummary-value" id="final-species">—</span></div>
+          <div class="csummary-row"><span class="csummary-label">Origin</span><span class="csummary-value" id="final-origin">—</span></div>
+          <div class="csummary-row"><span class="csummary-label">Path</span><span class="csummary-value" id="final-path">—</span></div>
+          <div class="csummary-row"><span class="csummary-label">Career</span><span class="csummary-value" id="final-career">—</span></div>
+        </div>
+
+        <div class="csummary-block">
+          <h2 class="csummary-title">Assign trait modifiers</h2>
+          <p class="csummary-body">Distribute the following values across your six traits in any combination. Your species and origin bonuses are added on top.</p>
+          <div class="trait-chips">
+            <span class="trait-chip">+2</span>
+            <span class="trait-chip">+1</span>
+            <span class="trait-chip">+1</span>
+            <span class="trait-chip">+0</span>
+            <span class="trait-chip">+0</span>
+            <span class="trait-chip trait-chip--neg">−1</span>
+          </div>
+        </div>
+
+        <div class="csummary-block">
+          <h2 class="csummary-title">Calculate your stats</h2>
+          <div class="csummary-formula">
+            <div class="formula-item">
+              <span class="formula-label">Evasion</span>
+              <span class="formula-calc">12 + AGI modifier</span>
+            </div>
+            <div class="formula-item">
+              <span class="formula-label">Major threshold</span>
+              <span class="formula-calc">Species DT + RES modifier</span>
+            </div>
+            <div class="formula-item">
+              <span class="formula-label">Severe threshold</span>
+              <span class="formula-calc">Major × 2</span>
+            </div>
+            <div class="formula-item">
+              <span class="formula-label">Massive threshold</span>
+              <span class="formula-calc">Severe × 2</span>
+            </div>
+            <div class="formula-item">
+              <span class="formula-label">Starting HP / WP</span>
+              <span class="formula-calc">6 slots each</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="csummary-block csummary-block--cta">
+          <p class="csummary-body">Transfer everything to your Hero sheet and mark off 1d4 Willpower slots to begin your adventure.</p>
+          <a href="index.html" class="creation-btn creation-btn--primary">Begin your saga</a>
+        </div>
+
+      </div>
+    </div>
+
+  </main><!-- /creation-main -->
+
+  <!-- ── Detail drawer (slides in from right) ── -->
+  <aside class="creation-drawer" id="creation-drawer" aria-hidden="true">
+    <button class="drawer-close" onclick="Creation.closeDrawer()" aria-label="Close detail">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="drawer-content" id="drawer-content"></div>
+  </aside>
+
+</div><!-- /creation-shell -->
+
+<!-- ── Footer bar: navigation ── -->
+<div class="creation-footer">
+  <div class="creation-footer__inner">
+    <button class="creation-btn creation-btn--ghost" id="btn-back" onclick="Creation.back()" disabled>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
+    </button>
+    <div class="creation-footer__progress">
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill" style="width:20%"></div>
+      </div>
+    </div>
+    <button class="creation-btn creation-btn--primary" id="btn-next" onclick="Creation.next()" disabled>
+      Continue
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+'use strict';
+const Creation = (() => {
+  const STEPS = ['species','origin','path','career','finalise'];
+  const LABELS = ['Species','Origin','Path','Career','Finalise'];
+  let current = 1;
+  const selections = { species: null, origin: null, path: null, career: null };
+
+  function goToStep(n) {
+    // Can only jump to completed steps or the current one
+    const maxAllowed = Object.values(selections).filter(Boolean).length + 1;
+    if (n > maxAllowed) return;
+
+    current = n;
+    document.querySelectorAll('.creation-step').forEach((s, i) => {
+      s.classList.toggle('active', i + 1 === n);
+    });
+    document.querySelectorAll('.stepper-item').forEach((item, i) => {
+      item.classList.remove('active','completed');
+      if (i + 1 === n) item.classList.add('active');
+      if (i + 1 < n)  item.classList.add('completed');
+    });
+    document.getElementById('step-label').textContent = `Step ${n} of 5`;
+    document.getElementById('btn-back').disabled = n === 1;
+    updateContinue();
+    updateProgress();
+    closeDrawer();
+    document.querySelector('.creation-main').scrollTop = 0;
+  }
+
+  function select(card, type) {
+    const val = card.dataset.value;
+    selections[type] = val;
+
+    // Deselect siblings
+    card.closest('.creation-grid').querySelectorAll('.creation-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+
+    // Update summary rail
+    const sumEl = document.getElementById(`sum-${type}`);
+    if (sumEl) {
+      sumEl.style.display = 'flex';
+      document.getElementById(`sum-${type}-val`).textContent = val;
+    }
+    // Update finalise panel
+    const finalEl = document.getElementById(`final-${type}`);
+    if (finalEl) finalEl.textContent = val;
+
+    updateContinue();
+  }
+
+  function updateContinue() {
+    const stepKey = STEPS[current - 1];
+    const hasSelection = current === 5 || selections[stepKey] !== null;
+    document.getElementById('btn-next').disabled = !hasSelection;
+  }
+
+  function updateProgress() {
+    const pct = (current / 5) * 100;
+    document.getElementById('progress-fill').style.width = pct + '%';
+  }
+
+  function next() {
+    if (current < 5) goToStep(current + 1);
+    else window.location.href = 'index.html';
+  }
+
+  function back() {
+    if (current > 1) goToStep(current - 1);
+  }
+
+  function closeDrawer() {
+    const d = document.getElementById('creation-drawer');
+    d.classList.remove('open');
+    d.setAttribute('aria-hidden', 'true');
+  }
+
+  // Public
+  return { goToStep, select, next, back, closeDrawer };
+})();
+</script>
+

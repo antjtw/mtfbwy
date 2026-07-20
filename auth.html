@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In — MTFBYW</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-body">
+
+<div class="auth-shell">
+
+  <!-- Left panel — brand / atmosphere -->
+  <div class="auth-panel auth-panel--brand" aria-hidden="true">
+    <a href="index.html" class="auth-logo">MTF<span>B</span>WY</a>
+    <div class="auth-panel__content">
+      <h1 class="auth-panel__heading">The galaxy<br>awaits your<br>legend.</h1>
+      <p class="auth-panel__sub">A saga of imagination and cinematic storytelling. Heroes bound by choice, destiny, and the eternal pull of the Force Dyad.</p>
+    </div>
+    <div class="auth-panel__dyad">
+      <span class="auth-dyad-dot auth-dyad-dot--balance"></span>
+      <span class="auth-dyad-dot auth-dyad-dot--despair"></span>
+    </div>
+  </div>
+
+  <!-- Right panel — form -->
+  <div class="auth-panel auth-panel--form">
+    <div class="auth-form-wrap">
+
+      <!-- Tab switcher: Sign up / Log in -->
+      <div class="auth-tabs" role="tablist">
+        <button class="auth-tab active" id="tab-signup" role="tab" aria-selected="true"  aria-controls="pane-signup"  onclick="AuthUI.switchTab('signup')">Sign up</button>
+        <button class="auth-tab"        id="tab-login"  role="tab" aria-selected="false" aria-controls="pane-login"   onclick="AuthUI.switchTab('login')">Log in</button>
+      </div>
+
+      <!-- ── Sign up pane ── -->
+      <div class="auth-pane active" id="pane-signup" role="tabpanel" aria-labelledby="tab-signup">
+        <h2 class="auth-form__title">Create your account</h2>
+        <p class="auth-form__sub">Start your adventure. No credits required.</p>
+
+        <form class="auth-form" id="form-signup" novalidate onsubmit="AuthUI.handleSignup(event)">
+
+          <div class="auth-field" id="field-name">
+            <label class="auth-label" for="signup-name">Display name</label>
+            <input class="auth-input" type="text" id="signup-name" name="name" autocomplete="name" placeholder="Mandalorian, Rebel, Jedi…" required>
+            <span class="auth-field-error" aria-live="polite"></span>
+          </div>
+
+          <div class="auth-field" id="field-email">
+            <label class="auth-label" for="signup-email">Email address</label>
+            <input class="auth-input" type="email" id="signup-email" name="email" autocomplete="email" placeholder="you@galaxy.far" required>
+            <span class="auth-field-error" aria-live="polite"></span>
+          </div>
+
+          <div class="auth-field" id="field-password">
+            <label class="auth-label" for="signup-password">Password</label>
+            <div class="auth-input-wrap">
+              <input class="auth-input" type="password" id="signup-password" name="password" autocomplete="new-password" placeholder="8+ characters" required minlength="8">
+              <button type="button" class="auth-input-toggle" aria-label="Show password" onclick="AuthUI.togglePassword(this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+            <span class="auth-field-error" aria-live="polite"></span>
+          </div>
+
+          <div class="auth-field-error auth-form-error" id="signup-form-error" aria-live="assertive"></div>
+
+          <button class="auth-btn auth-btn--primary" type="submit">
+            <span class="auth-btn__label">Create account</span>
+            <span class="auth-btn__spinner" aria-hidden="true"></span>
+          </button>
+
+        </form>
+
+        <p class="auth-terms">By creating an account you agree this is a fan project with no commercial purpose. <a href="#">Legal information</a></p>
+      </div>
+
+      <!-- ── Log in pane ── -->
+      <div class="auth-pane" id="pane-login" role="tabpanel" aria-labelledby="tab-login">
+        <h2 class="auth-form__title">Welcome back</h2>
+        <p class="auth-form__sub">The Force has been keeping your seat warm.</p>
+
+        <form class="auth-form" id="form-login" novalidate onsubmit="AuthUI.handleLogin(event)">
+
+          <div class="auth-field" id="login-field-email">
+            <label class="auth-label" for="login-email">Email address</label>
+            <input class="auth-input" type="email" id="login-email" name="email" autocomplete="email" placeholder="you@galaxy.far" required>
+            <span class="auth-field-error" aria-live="polite"></span>
+          </div>
+
+          <div class="auth-field" id="login-field-password">
+            <label class="auth-label" for="login-password">Password</label>
+            <div class="auth-input-wrap">
+              <input class="auth-input" type="password" id="login-password" name="password" autocomplete="current-password" placeholder="Your password" required>
+              <button type="button" class="auth-input-toggle" aria-label="Show password" onclick="AuthUI.togglePassword(this)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+            <span class="auth-field-error" aria-live="polite"></span>
+          </div>
+
+          <div class="auth-field-error auth-form-error" id="login-form-error" aria-live="assertive"></div>
+
+          <button class="auth-btn auth-btn--primary" type="submit">
+            <span class="auth-btn__label">Log in</span>
+            <span class="auth-btn__spinner" aria-hidden="true"></span>
+          </button>
+
+          <a href="#" class="auth-forgot" onclick="AuthUI.showForgotPassword(event)">Forgotten your password?</a>
+        </form>
+      </div>
+
+      <!-- ── Forgotten password pane ── -->
+      <div class="auth-pane" id="pane-forgot" role="tabpanel">
+        <button class="auth-back" onclick="AuthUI.switchTab('login')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          Back to log in
+        </button>
+        <h2 class="auth-form__title">Reset your password</h2>
+        <p class="auth-form__sub">Enter your email and we'll send a reset link.</p>
+        <form class="auth-form" id="form-forgot" novalidate onsubmit="AuthUI.handleForgot(event)">
+          <div class="auth-field" id="forgot-field-email">
+            <label class="auth-label" for="forgot-email">Email address</label>
+            <input class="auth-input" type="email" id="forgot-email" name="email" autocomplete="email" placeholder="you@galaxy.far" required>
+            <span class="auth-field-error" aria-live="polite"></span>
+          </div>
+          <button class="auth-btn auth-btn--primary" type="submit">
+            <span class="auth-btn__label">Send reset link</span>
+            <span class="auth-btn__spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+      </div>
+
+      <!-- ── Confirmation / Success pane ── -->
+      <div class="auth-pane" id="pane-confirm" role="tabpanel">
+        <div class="auth-confirm">
+          <div class="auth-confirm__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-gold)" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+          </div>
+          <h2 class="auth-form__title" id="confirm-heading">Check your email</h2>
+          <p class="auth-form__sub" id="confirm-body">We've sent a confirmation link to <strong id="confirm-email"></strong>. Open it to activate your account.</p>
+          <p class="auth-confirm__resend">Didn't receive it? <button type="button" class="auth-link-btn" onclick="AuthUI.resend()">Resend email</button></p>
+        </div>
+      </div>
+
+    </div><!-- /auth-form-wrap -->
+  </div><!-- /auth-panel--form -->
+
+</div><!-- /auth-shell -->
+
+<script>
+'use strict';
+const AuthUI = {
+  switchTab(tab) {
+    document.querySelectorAll('.auth-tab').forEach(b => {
+      b.classList.toggle('active', b.id === `tab-${tab}`);
+      b.setAttribute('aria-selected', b.id === `tab-${tab}`);
+    });
+    document.querySelectorAll('.auth-pane').forEach(p => {
+      p.classList.toggle('active', p.id === `pane-${tab}`);
+    });
+  },
+
+  showPane(id) {
+    document.querySelectorAll('.auth-tab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.auth-pane').forEach(p => p.classList.toggle('active', p.id === id));
+  },
+
+  showForgotPassword(e) {
+    e.preventDefault();
+    this.showPane('pane-forgot');
+  },
+
+  togglePassword(btn) {
+    const input = btn.closest('.auth-input-wrap').querySelector('input');
+    const isHidden = input.type === 'password';
+    input.type = isHidden ? 'text' : 'password';
+    btn.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
+  },
+
+  setLoading(formId, loading) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+    const btn = form.querySelector('.auth-btn--primary');
+    btn.classList.toggle('loading', loading);
+    btn.disabled = loading;
+  },
+
+  clearErrors(formId) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+    form.querySelectorAll('.auth-field').forEach(f => f.classList.remove('error'));
+    form.querySelectorAll('.auth-field-error').forEach(e => e.textContent = '');
+    const fe = form.closest('.auth-pane')?.querySelector('.auth-form-error');
+    if (fe) fe.textContent = '';
+  },
+
+  fieldError(inputId, message) {
+    const input = document.getElementById(inputId);
+    if (!input) return;
+    const field = input.closest('.auth-field');
+    field.classList.add('error');
+    const err = field.querySelector('.auth-field-error');
+    if (err) err.textContent = message;
+    input.focus();
+  },
+
+  validate(fields) {
+    // fields: [{id, check, message}, ...]
+    for (const {id, check, message} of fields) {
+      const el = document.getElementById(id);
+      if (!el) continue;
+      if (!check(el.value)) {
+        this.fieldError(id, message);
+        return false;
+      }
+    }
+    return true;
+  },
+
+  handleSignup(e) {
+    e.preventDefault();
+    this.clearErrors('form-signup');
+    const ok = this.validate([
+      { id: 'signup-name',     check: v => v.trim().length >= 2,      message: 'Enter a display name (at least 2 characters).' },
+      { id: 'signup-email',    check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v), message: 'Enter a valid email address.' },
+      { id: 'signup-password', check: v => v.length >= 8,             message: 'Password must be at least 8 characters.' },
+    ]);
+    if (!ok) return;
+    this.setLoading('form-signup', true);
+    setTimeout(() => {
+      this.setLoading('form-signup', false);
+      const email = document.getElementById('signup-email').value;
+      document.getElementById('confirm-email').textContent = email;
+      document.getElementById('confirm-heading').textContent = 'Check your email';
+      document.getElementById('confirm-body').innerHTML = `We've sent a confirmation link to <strong>${email}</strong>. Open it to activate your account.`;
+      this.showPane('pane-confirm');
+    }, 1200);
+  },
+
+  handleLogin(e) {
+    e.preventDefault();
+    this.clearErrors('form-login');
+    const ok = this.validate([
+      { id: 'login-email',    check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v), message: 'Enter your email address.' },
+      { id: 'login-password', check: v => v.length >= 1, message: 'Enter your password.' },
+    ]);
+    if (!ok) return;
+    this.setLoading('form-login', true);
+    setTimeout(() => {
+      this.setLoading('form-login', false);
+      // Simulate auth error for demo
+      const err = document.getElementById('login-form-error');
+      if (err) {
+        err.textContent = 'Those credentials don\'t match. Try again or reset your password.';
+        document.getElementById('login-field-email').closest('.auth-field').classList.add('error');
+        document.getElementById('login-field-password').closest('.auth-field').classList.add('error');
+      }
+    }, 1200);
+  },
+
+  handleForgot(e) {
+    e.preventDefault();
+    this.clearErrors('form-forgot');
+    const ok = this.validate([
+      { id: 'forgot-email', check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v), message: 'Enter a valid email address.' },
+    ]);
+    if (!ok) return;
+    this.setLoading('form-forgot', true);
+    setTimeout(() => {
+      this.setLoading('form-forgot', false);
+      const email = document.getElementById('forgot-email').value;
+      document.getElementById('confirm-email').textContent = email;
+      document.getElementById('confirm-heading').textContent = 'Reset link sent';
+      document.getElementById('confirm-body').innerHTML = `We've sent a password reset link to <strong>${email}</strong>. Check your inbox.`;
+      this.showPane('pane-confirm');
+    }, 1200);
+  },
+
+  resend() {
+    const btn = document.querySelector('.auth-confirm__resend .auth-link-btn');
+    if (btn) {
+      btn.textContent = 'Sent!';
+      btn.disabled = true;
+      setTimeout(() => { btn.textContent = 'Resend email'; btn.disabled = false; }, 3000);
+    }
+  }
+};
+</script>
+
+</body>
+</html>

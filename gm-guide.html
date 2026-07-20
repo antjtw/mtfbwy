@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GM Guide — MTFBYW</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+<div id="site-header-mount"></div>
+
+<div class="page-wrap">
+
+  <aside class="sidebar">
+    <div class="sidebar-group">
+      <span class="sidebar-label">Principles</span>
+      <a href="#gm-principles"   class="sidebar-link">GM Principles</a>
+      <a href="#rolling-dice"    class="sidebar-link">Rolling Dice</a>
+      <a href="#gm-moves"        class="sidebar-link">GM Moves</a>
+    </div>
+    <div class="sidebar-group">
+      <span class="sidebar-label">Tools</span>
+      <a href="#despair"         class="sidebar-link">Using Despair</a>
+      <a href="#difficulty"      class="sidebar-link">Difficulty Benchmarks</a>
+      <a href="#improvised"      class="sidebar-link">Improvising Damage</a>
+      <a href="#countdowns"      class="sidebar-link">Countdowns</a>
+    </div>
+    <div class="sidebar-group">
+      <span class="sidebar-label">Encounters</span>
+      <a href="#concluding"      class="sidebar-link">Concluding Encounters</a>
+      <a href="#running-npcs"    class="sidebar-link">Running NPCs</a>
+      <a href="#awarding"        class="sidebar-link">Awarding Players</a>
+      <a href="#adversaries"     class="sidebar-link">Adversaries</a>
+      <a href="#environments"    class="sidebar-link">Environments</a>
+      <a href="#building"        class="sidebar-link">Building Encounters</a>
+    </div>
+  </aside>
+
+  <article class="content">
+
+    <header class="page-hero">
+      <span class="page-hero__eyebrow">Chapter 8</span>
+      <h1 class="page-hero__title">GM <em>Guide</em></h1>
+      <p class="page-hero__lead">As the Game Master, you are not the adversary nor the author of a fixed tale — you are the living pulse of the world. These principles and tools help you run with confidence, clarity, and creativity.</p>
+    </header>
+
+    <!-- GM Principles -->
+    <section id="gm-principles" class="rule-section">
+      <h2 class="section-title">GM Principles</h2>
+      <div class="grid-2">
+        <div class="card">
+          <div class="card__title">Make the World Feel Real</div>
+          <p>Describe with all the senses. Show how factions scheme, landscapes shift, and rumours spread. Treat every part of the setting as though it lives and breathes — even beyond the players' sight.</p>
+          <p style="color:var(--color-text-subdued);font-size:var(--text-sm);margin-top:var(--space-2);"><strong>Pitfall:</strong> Don't drown players in description. Give them enough to act, then let their questions guide the detail.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Play to Find Out What Happens</div>
+          <p>Don't script outcomes. Instead, set the stage, place moving parts in motion, and let the story emerge through the players' actions and the dice.</p>
+          <p style="color:var(--color-text-subdued);font-size:var(--text-sm);margin-top:var(--space-2);"><strong>Pitfall:</strong> Railroading — forcing players back onto a predetermined path — robs their choices of meaning.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Frame, Don't Fumble</div>
+          <p>Start scenes in the middle of action or decision, not the slow lead-up. Keep momentum alive by asking, "What do you do?"</p>
+          <p style="color:var(--color-text-subdued);font-size:var(--text-sm);margin-top:var(--space-2);"><strong>Pitfall:</strong> Letting play bog down in long travel logs or empty errands. Skip to the good stuff.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Adjudicate with Fairness</div>
+          <p>You are referee as much as narrator. Apply rules and consequences consistently, and when uncertain, make a ruling that keeps the game moving.</p>
+          <p style="color:var(--color-text-subdued);font-size:var(--text-sm);margin-top:var(--space-2);"><strong>Pitfall:</strong> Playing favourites. Everyone at the table deserves the same chance to shine.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Share the Focus</div>
+          <p>Every character deserves moments to shine. Rotate attention, highlight different strengths, and ensure no one feels sidelined.</p>
+          <p style="color:var(--color-text-subdued);font-size:var(--text-sm);margin-top:var(--space-2);"><strong>Pitfall:</strong> Letting louder players dominate while quiet ones fade into the background.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Let Choices Matter</div>
+          <p>Player decisions should echo through the world — altering relationships, tilting balances of power, leaving marks on the galaxy.</p>
+          <p style="color:var(--color-text-subdued);font-size:var(--text-sm);margin-top:var(--space-2);"><strong>Pitfall:</strong> Undoing consequences just to protect your plans.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Say Yes, or Let the Dice Decide</div>
+          <p>If an idea fits the fiction, allow it. If there's uncertainty, call for a roll. Never stall creativity in the name of rigidity.</p>
+          <p style="color:var(--color-text-subdued);font-size:var(--text-sm);margin-top:var(--space-2);"><strong>Pitfall:</strong> Shutting down clever ideas simply because they weren't anticipated.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Balance Challenge with Opportunity</div>
+          <p>Test the characters with danger, intrigue, or moral choices — but always pair hardship with the possibility of triumph or discovery.</p>
+          <p style="color:var(--color-text-subdued);font-size:var(--text-sm);margin-top:var(--space-2);"><strong>Pitfall:</strong> Relentless punishment. Without hope or moments of victory, tension collapses into frustration.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Keep the Tone True</div>
+          <p>The galaxy reflects its genre. Carry mood through descriptions, NPC reactions, and consequences.</p>
+          <p style="color:var(--color-text-subdued);font-size:var(--text-sm);margin-top:var(--space-2);"><strong>Pitfall:</strong> Jarring tone shifts that pull players out of the story (unless intentional).</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Embrace Surprise, Even Your Own</div>
+          <p>Allow yourself to be surprised by the dice, by the table, and by where the story wants to go.</p>
+          <p style="color:var(--color-text-subdued);font-size:var(--text-sm);margin-top:var(--space-2);"><strong>Pitfall:</strong> Treating the game like a performance where only you know the ending. The fun lies in discovering it together.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rolling Dice -->
+    <section id="rolling-dice" class="rule-section">
+      <h2 class="section-title">Rolling Dice</h2>
+      <p>The GM does not use Dyad Dice. Instead, they roll a single d20, referred to as the <strong>GM's Die</strong>.</p>
+
+      <h3 class="section-subtitle">Adversary Attack Rolls</h3>
+      <ol class="step-list">
+        <li><div>Roll the GM's Die (d20) and add the adversary's attack bonus.</div></li>
+        <li><div>If the total equals or exceeds the target's Evasion, the attack hits. Otherwise, it misses.</div></li>
+        <li><div>On a hit, roll the attack's damage dice and apply the result.</div></li>
+      </ol>
+
+      <h3 class="section-subtitle">Natural 20</h3>
+      <p>A natural 20 always hits, striking with critical extra force. Roll damage normally, then add the highest possible number from the damage dice rolled. Flat damage modifiers are doubled.</p>
+      <p><em>Example: An attack dealing 3d6+2 would instead deal 18 + 3d6 + 2.</em></p>
+
+      <h3 class="section-subtitle">Adversary Advantage &amp; Disadvantage</h3>
+      <p>If an adversary has Advantage on a GM Die roll, roll two d20s and keep the higher. If they have Disadvantage, roll two d20s and keep the lower.</p>
+    </section>
+
+    <!-- GM Moves -->
+    <section id="gm-moves" class="rule-section">
+      <h2 class="section-title">GM Moves</h2>
+      <p>Your moves shape the story in response to the players' actions. GM moves happen during GM turns — a GM turn begins when the Focus shifts to you, and ends when you hand it back to the players.</p>
+
+      <h3 class="section-subtitle">When to Make a GM Move</h3>
+      <p>Make a GM move when players:</p>
+      <ul>
+        <li>Roll with Despair</li>
+        <li>Fail an attack, skill check, or saving roll</li>
+        <li>Take an action with unavoidable consequences</li>
+        <li>Hand you a golden opportunity (an opening that demands a response)</li>
+        <li>Look to you to decide what happens next</li>
+      </ul>
+
+      <h3 class="section-subtitle">Choosing GM Moves by Roll Result</h3>
+
+      <div class="outcomes-grid">
+        <div class="outcome-chip outcome-chip--crit-major">
+          <div class="outcome-chip__label">Critical Success</div>
+          <div class="outcome-chip__text">The player describes their success, then you grant them an additional opportunity and advantage.</div>
+        </div>
+        <div class="outcome-chip outcome-chip--success-balance">
+          <div class="outcome-chip__label">Success with Balance</div>
+          <div class="outcome-chip__text">The player describes their success, and you show how the Galaxy opens a new opportunity in response.</div>
+        </div>
+        <div class="outcome-chip outcome-chip--success-despair">
+          <div class="outcome-chip__label">Success with Despair</div>
+          <div class="outcome-chip__text">The player succeeds, but at a cost. They describe the success, then you take a Despair and make a GM move to introduce a minor consequence.</div>
+        </div>
+        <div class="outcome-chip outcome-chip--failure-balance">
+          <div class="outcome-chip__label">Failure with Balance</div>
+          <div class="outcome-chip__text">The PC doesn't get what they want, but the setback is not catastrophic. Describe the failure, then introduce a minor consequence.</div>
+        </div>
+        <div class="outcome-chip outcome-chip--failure-despair">
+          <div class="outcome-chip__label">Failure with Despair</div>
+          <div class="outcome-chip__text">Things go badly — and dangerously. Describe how it unravels, then introduce a major consequence.</div>
+        </div>
+      </div>
+
+      <h3 class="section-subtitle">Yes/But/No Framework</h3>
+      <div class="grid-2" style="margin-top:var(--space-4);">
+        <div class="card card--feature"><strong>Success with Balance: Yes, and…</strong><p>You succeed cleanly, and the moment creates a new opportunity.</p></div>
+        <div class="card card--despair"><strong>Success with Despair: Yes, but…</strong><p>You succeed, but there's a consequence. The GM gains a Despair.</p></div>
+        <div class="card"><strong>Failure with Balance: No, but…</strong><p>Things don't go as planned, but you gain a new opportunity.</p></div>
+        <div class="card card--warning"><strong>Failure with Despair: No, and…</strong><p>You fail, and it gets worse. The GM gains a Despair.</p></div>
+      </div>
+
+      <h3 class="section-subtitle">Move Severity</h3>
+      <p><strong>Soft moves</strong> give players information and a chance to react — tension, foreshadowing. <strong>Hard moves</strong> escalate conflict, inflict consequences, or close off options. Use softer moves on rolls with Balance, and harsher moves on rolls with Despair.</p>
+
+      <h3 class="section-subtitle">Example GM Moves</h3>
+      <div class="grid-2">
+        <ul style="color:var(--color-text-subdued);">
+          <li>Show how the world reacts</li>
+          <li>Ask a question and build on the answer</li>
+          <li>Make an NPC act in line with their motive</li>
+          <li>Drive a PC to act by pressing their goals</li>
+          <li>Signal an imminent off-screen threat</li>
+          <li>Reveal an unwelcome truth or unexpected danger</li>
+          <li>Force the group to split up</li>
+          <li>Have a PC expend a resource</li>
+        </ul>
+        <ul style="color:var(--color-text-subdued);">
+          <li>Make a move the characters don't see</li>
+          <li>Show collateral damage</li>
+          <li>Clear an adversary's condition</li>
+          <li>Shift the environment</li>
+          <li>Focus on an adversary</li>
+          <li>Capture someone or something important</li>
+          <li>Use a PC's backstory against them</li>
+          <li>Take away an opportunity permanently</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Using Despair -->
+    <section id="despair" class="rule-section">
+      <h2 class="section-title">Using Despair</h2>
+      <p>Despair is the GM's narrative fuel — used to escalate tension and shift momentum. You start a campaign with <strong>1 Despair per adventurer</strong>. You gain Despair whenever a PC rolls with Despair, when the PCs rest, or when an ability instructs you to. Despair carries over between sessions.</p>
+
+      <h3 class="section-subtitle">Spending Despair</h3>
+      <ul>
+        <li>Interrupt the players and take the Focus with an Adversary, allowing them to take a regular turn</li>
+        <li>Make an additional GM move</li>
+        <li>Activate an Adversary's Despair Feature</li>
+        <li>Trigger an environmental Despair Feature</li>
+      </ul>
+
+      <h3 class="section-subtitle">Dramatic Tension</h3>
+      <table>
+        <thead><tr><th>Scene Type</th><th>Examples</th><th>Despair Range</th></tr></thead>
+        <tbody>
+          <tr><td>Incidental</td><td>Resupplying, downtime scenes, gathering info after drama</td><td>0–1</td></tr>
+          <tr><td>Minor</td><td>Travel encounters, small skirmishes, foreshadowed trouble</td><td>1–3</td></tr>
+          <tr><td>Standard</td><td>Notable battle, perilous travel, tense social encounter</td><td>2–4</td></tr>
+          <tr><td>Major</td><td>Large battle with a leader, character-defining moment</td><td>4–8</td></tr>
+          <tr><td>Climactic</td><td>Villain showdown, epic set piece, fateful duel</td><td>6–12</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="section-subtitle">Spending Tactics</h3>
+      <ul>
+        <li><strong>Spending Fast:</strong> Drop Despair before players can react, creating surprise</li>
+        <li><strong>Spending Often:</strong> Use Despair whenever Focus returns to you, keeping pressure constant</li>
+        <li><strong>Spending Big:</strong> Spend multiple Despair in quick succession to overwhelm the party</li>
+      </ul>
+    </section>
+
+    <!-- Difficulty Benchmarks -->
+    <section id="difficulty" class="rule-section">
+      <h2 class="section-title">Difficulty Benchmarks</h2>
+      <ul>
+        <li><strong>Attack rolls vs adversaries:</strong> Difficulty equals the adversary's Evasion</li>
+        <li><strong>Other action rolls vs adversaries:</strong> Difficulty equals the adversary's Difficulty score plus any relevant Trait modifier</li>
+        <li><strong>Unspecified rolls:</strong> When no set Difficulty exists, assign one based on the situation</li>
+      </ul>
+      <p>A quick rule of thumb: <strong>12 + relevant modifier</strong> is your baseline for any unspecified Difficulty.</p>
+    </section>
+
+    <!-- Improvising Damage -->
+    <section id="improvised" class="rule-section">
+      <h2 class="section-title">Improvising Damage</h2>
+      <p>Not every threat fits neatly into a weapon profile. Collapsing tunnels, industrial machinery, and volatile terrain all call for damage decided in the moment.</p>
+
+      <table>
+        <thead><tr><th>Dice</th><th>Examples</th></tr></thead>
+        <tbody>
+          <tr><td><span class="die-pill">1d10</span></td><td>Minor but dangerous harm — burned by hot coals, struck by falling debris, pricked by a poisoned needle</td></tr>
+          <tr><td><span class="die-pill">2d10</span></td><td>Severe environmental hazards — struck by lightning, falling into an ignited oil slick</td></tr>
+          <tr><td><span class="die-pill">4d10</span></td><td>Major structural or chemical threats — falling rubble in a collapsing tunnel, tumbling into a vat of acid</td></tr>
+          <tr><td><span class="die-pill">8d10</span></td><td>Extreme industrial or natural dangers — crushed by a trash compactor, struck by whirling durasteel blades</td></tr>
+          <tr><td><span class="die-pill">16d10</span></td><td>Catastrophic harm — submerged in molten lava, struck by a crashing starfighter</td></tr>
+          <tr><td><span class="die-pill die-pill--danger">31d10</span></td><td>Mythic or cosmic-scale threats — the smite of a Mortis God, the jaws of the Great Purrgil</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="section-subtitle">Damage Severity by Level</h3>
+      <table>
+        <thead><tr><th>Hero Level</th><th>Nuisance</th><th>Deadly</th></tr></thead>
+        <tbody>
+          <tr><td>1–3</td><td>1d10</td><td>3d10</td></tr>
+          <tr><td>4–6</td><td>2d10</td><td>6d10</td></tr>
+          <tr><td>7–9</td><td>4d10</td><td>12d10</td></tr>
+          <tr><td>8–12</td><td>8d10</td><td>24d10</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout--balance" style="margin-top:var(--space-4);">
+        <div class="callout__icon">🎬</div>
+        <div class="callout__body">
+          <div class="callout__title">Cinematic Guidance</div>
+          <p>When uncertain, choose drama over precision. The exact number matters less than the moment it creates. Let the dice support the story, not slow it down.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Countdowns -->
+    <section id="countdowns" class="rule-section">
+      <h2 class="section-title">Countdowns</h2>
+      <p>Countdowns represent a ticking clock — events running out before something happens. A countdown starts at a set value and decreases as it advances. When it reaches 0, its effect is triggered.</p>
+
+      <h3 class="section-subtitle">Standard Countdowns</h3>
+      <p>A standard countdown decreases by 1 every time a player makes a Dyad Dice roll. If an adversary, ability, or environment feature refers to a "Countdown [n]," it means a standard countdown starting at n.</p>
+
+      <h3 class="section-subtitle">Dynamic Countdowns</h3>
+      <p>Dynamic countdowns shift based on outcomes, moving up to 3 steps per roll.</p>
+      <table>
+        <thead><tr><th>Roll Result</th><th>Progress Advancement</th><th>Consequence Advancement</th></tr></thead>
+        <tbody>
+          <tr><td>Failure with Despair</td><td>No advancement</td><td>Tick down 3</td></tr>
+          <tr><td>Failure with Balance</td><td>No advancement</td><td>Tick down 2</td></tr>
+          <tr><td>Success with Despair</td><td>Tick down 1</td><td>Tick down 1</td></tr>
+          <tr><td>Success with Balance</td><td>Tick down 2</td><td>No advancement</td></tr>
+          <tr><td>Critical Success</td><td>Tick down 3</td><td>No advancement</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="section-subtitle">Advanced Countdown Features</h3>
+      <div class="grid-2">
+        <div class="card"><strong>Randomised:</strong> Start at a hidden or random value</div>
+        <div class="card"><strong>Loop:</strong> Reset to their starting value once triggered</div>
+        <div class="card"><strong>Increasing:</strong> Each loop starts with +1 to its value</div>
+        <div class="card"><strong>Decreasing:</strong> Each loop starts with −1 to its value</div>
+        <div class="card"><strong>Linked:</strong> Progress and Consequence countdowns both advance on the same rolls</div>
+        <div class="card"><strong>Long-Term:</strong> Advance only after rests instead of every roll</div>
+      </div>
+    </section>
+
+    <!-- Concluding Encounters -->
+    <section id="concluding" class="rule-section">
+      <h2 class="section-title">Concluding an Encounter</h2>
+      <p>When combat ends — through defeat of a Leader, retreat or surrender of adversaries, or the GM declaring the threat resolved — the GM may spend <strong>3 Despair</strong> to initiate a Strenuous Combat Saving Roll once the physical encounter concludes.</p>
+      <p>Each Hero must make a <strong>Resilience Saving Roll</strong>. The base Difficulty is 12. The GM may increase this by spending additional Despair (e.g., spending 5 total Despair sets the Difficulty to 14).</p>
+
+      <table>
+        <thead><tr><th>Roll Result</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td>Critical Success</td><td>The Hero finds a second wind — all Willpower slots restored</td></tr>
+          <tr><td>Success with Balance</td><td>The Hero comes away steady — restore 1 Willpower slot</td></tr>
+          <tr><td>Success with Despair</td><td>The Hero holds together — no penalty to Willpower</td></tr>
+          <tr><td>Failure with Balance</td><td>The Hero overexerts themselves — mark off 1 Willpower slot</td></tr>
+          <tr><td>Failure with Despair</td><td>The Hero is drained — mark off all remaining Willpower slots</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Running NPCs -->
+    <section id="running-npcs" class="rule-section">
+      <h2 class="section-title">Running NPCs</h2>
+      <p>NPCs bring the world to life through their goals, quirks, and methods. Treat them as dynamic characters rather than background props. Give them names, motivation, and a physical description — ideally on an NPC Card.</p>
+
+      <h3 class="section-subtitle">NPC Cards</h3>
+      <p>Each NPC Card captures:</p>
+      <ul>
+        <li><strong>Goal</strong> — what they want</li>
+        <li><strong>Method</strong> — how they achieve it (charm, lies, brute force, etc.)</li>
+        <li><strong>Anchor</strong> — a quirk, phrase, or memorable detail</li>
+        <li><strong>Attitude</strong> — Indifferent, Friendly, or Hostile</li>
+      </ul>
+
+      <div class="card card--feature" style="margin-top:var(--space-4);">
+        <div class="card__title">Example NPC Card: Gary Woodland</div>
+        <div class="card__meta">Bouncer for Global Bastards Ltd</div>
+        <p><strong>Goal:</strong> Earn credits purely for personal gain</p>
+        <p><strong>Method:</strong> Takes any job going, but puts in the bare minimum effort</p>
+        <p><strong>Anchor:</strong> Picks his teeth with a claw while others talk, staring off as if half elsewhere</p>
+        <p><strong>Attitude:</strong> Indifferent. Rarely listens. Detached, often agrees without caring.</p>
+        <p style="margin-top:var(--space-3);color:var(--color-text-subdued);font-size:var(--text-sm);"><em>A purple-scaled Tiss'Shar with jagged, predatory teeth and a ridge-like crest crowning his head. He sports a battered bright-blue Berghaus jacket that barely conceals his weapons beneath.</em></p>
+      </div>
+
+      <h3 class="section-subtitle">NPCs in Combat</h3>
+      <p>Keep NPCs narrative unless mechanics matter. Most NPCs don't need hit points or willpower unless they interact mechanically. Focus on their role in the scene and reward PCs who leverage their help.</p>
+
+      <h3 class="section-subtitle">Example NPC Features</h3>
+      <div class="grid-2">
+        <div class="card">
+          <div class="card__title">Hold Still</div>
+          <p><strong>Choose:</strong> At encounter start, choose a favoured PC.<br><strong>Trigger:</strong> That PC makes a melee attack near the NPC.<br><strong>Effect:</strong> NPC restrains the enemy if their Difficulty meets the Adversary's. PC gains Advantage on the attack.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Sage Advice</div>
+          <p><strong>Choose:</strong> At encounter start, select a pupil PC.<br><strong>Trigger:</strong> Pupil is within Close range and fails a roll.<br><strong>Effect:</strong> NPC provides advice; the PC rerolls with Advantage.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Blaster Volley</div>
+          <p><strong>Trigger:</strong> NPC joins a firefight.<br><strong>Effect:</strong> Start a countdown (Loop 3). On trigger, NPC fires a volley at a PC target: 2d8+3 NRG damage.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Professional Business Being</div>
+          <p><strong>Trigger:</strong> NPC shares a full rest with the party.<br><strong>Effect:</strong> Roll 1d4. On 1–2, the NPC vanishes — stealing 1d100×4 credits.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awarding Players -->
+    <section id="awarding" class="rule-section">
+      <h2 class="section-title">Awarding Players</h2>
+      <p>Rewards keep the game world alive and give players a sense of progress. When awarding loot, credits, or benefits, think about what fits the story, the setting, and the players' motivations.</p>
+
+      <div class="grid-2">
+        <div class="card card--feature">
+          <div class="card__title">Make Rewards Meaningful</div>
+          <p>A battered blaster pulled from a swoop ganger's belt tells a story. An anonymous item dropped from nowhere breaks immersion. Place loot where it belongs and let it carry history.</p>
+        </div>
+        <div class="card card--feature">
+          <div class="card__title">Mix Material and Narrative</div>
+          <p>Credits, weapons, and upgrades are valuable, but so are allies, reputation, rare knowledge, and favours owed. Blending the two ensures every kind of player feels recognised.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Keep Credits Scarce but Relevant</div>
+          <p>Credits should grease the wheels, not erase tension. Pay the crew enough to keep them flying, but not enough to live easy.</p>
+        </div>
+        <div class="card">
+          <div class="card__title">Reward Choices, Not Just Encounters</div>
+          <p>The richest prizes come from player agency — bargaining for a better payout, pushing deeper into danger, or forging a bond with an NPC.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Adversaries -->
+    <section id="adversaries" class="rule-section">
+      <h2 class="section-title">Adversaries</h2>
+
+      <h3 class="section-subtitle">Adversary Tiers</h3>
+      <table>
+        <thead><tr><th>Tier</th><th>Hero Level</th></tr></thead>
+        <tbody>
+          <tr><td>Tier 0</td><td>Level 1</td></tr>
+          <tr><td>Tier 1</td><td>Levels 2–4</td></tr>
+          <tr><td>Tier 2</td><td>Levels 5–8</td></tr>
+          <tr><td>Tier 3</td><td>Levels 9–12</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="section-subtitle">Adversary Types</h3>
+      <div class="grid-3">
+        <div class="card"><strong>Minions:</strong> Disposable. Pressure through numbers. Battle droids, gang footsoldiers.</div>
+        <div class="card"><strong>Squads:</strong> Groups acting as a single coordinated unit. Stormtrooper fireteams.</div>
+        <div class="card"><strong>Standards:</strong> Baseline faction representatives. The backbone of most encounters.</div>
+        <div class="card"><strong>Enforcers:</strong> Tough frontline combatants. Trandoshan hunters, riot troopers.</div>
+        <div class="card"><strong>Skirmishers:</strong> Mobile, opportunistic. Assassins, bounty hunters, scouts.</div>
+        <div class="card"><strong>Marksmen:</strong> High-damage ranged. Snipers, heavy gunners, turret operators.</div>
+        <div class="card"><strong>Specialists:</strong> Defined by a specific threat or toolset. Slicers, demolitionists, medics.</div>
+        <div class="card"><strong>Commanders:</strong> Issue orders, reposition allies, call reinforcements. Imperial officers.</div>
+        <div class="card"><strong>Adepts:</strong> Force, Magick, or Tech casters. Inquisitors, Nightsisters, combat slicers.</div>
+        <div class="card"><strong>Support Units:</strong> Strengthen allies, disrupt Heroes. Shield bearers, morale officers.</div>
+        <div class="card"><strong>Influencers:</strong> Non-combat tension through authority or manipulation. Crime bosses.</div>
+        <div class="card"><strong>Nemeses:</strong> Challenge an entire party alone. Often have multiple phases. Sith rivals.</div>
+      </div>
+
+      <h3 class="section-subtitle">Stats at a Glance</h3>
+      <p>Adversaries use the same trait array as Heroes (+2, +1, +1, +0, +0, −1), then may further increase traits by tier:</p>
+      <table>
+        <thead><tr><th>Tier</th><th>Trait Increases</th><th>Proficiency Bonus</th></tr></thead>
+        <tbody>
+          <tr><td>Tier 0</td><td>+2 to one trait, or +1 to two traits</td><td>+2</td></tr>
+          <tr><td>Tier 1</td><td>+4 to one trait, or spread</td><td>+4</td></tr>
+          <tr><td>Tier 2</td><td>+6 to one trait, or spread</td><td>+6</td></tr>
+          <tr><td>Tier 3</td><td>+8 to one trait, or spread</td><td>+8</td></tr>
+        </tbody>
+      </table>
+
+      <p>Adversaries do not have a Minor damage threshold. Any successful hit that deals 1 or more damage marks Hit Point slots, unless a feature states otherwise.</p>
+
+      <h3 class="section-subtitle">Adversary Actions</h3>
+      <p>When an adversary is Focused, it may perform one of:</p>
+      <ul>
+        <li>Two manoeuvres, or</li>
+        <li>One manoeuvre and one combat action, or</li>
+        <li>One manoeuvre and one ritual progression</li>
+      </ul>
+      <p>Adversaries do not track Reaction Slots — they may react whenever a listed trigger occurs, provided it makes narrative sense.</p>
+
+      <h3 class="section-subtitle">Willpower for Adversaries</h3>
+      <p>Recommended only for Commanders, Nemeses, or other key adversaries whose defeat should carry narrative weight. Willpower may fuel powers or features, and primarily delays death:</p>
+      <ul>
+        <li>If Hit Point Slots are depleted but Willpower remains, the adversary gains the Dying condition</li>
+        <li>If Willpower is depleted while Hit Point Slots remain, the adversary falls Unconscious</li>
+      </ul>
+    </section>
+
+    <!-- Environments -->
+    <section id="environments" class="rule-section">
+      <h2 class="section-title">Using Environments</h2>
+      <p>Environments are not backdrops — they are active participants in a scene. A strong environment pressures Heroes even when no adversary is acting, and gives you tools to escalate tension without adding more enemies.</p>
+
+      <h3 class="section-subtitle">Environmental Features</h3>
+      <div class="grid-2">
+        <div class="card"><strong>Passives:</strong> Always in effect. Toxic fog, extreme heat, unstable ground reducing movement.</div>
+        <div class="card"><strong>Reactions:</strong> Activate in response to specific actions. Alarms when doors are forced, collapsing walkways under heavy weapons fire.</div>
+        <div class="card"><strong>Despair Features:</strong> High-impact events triggered by spending Despair. Explosions, cave-ins, system overloads.</div>
+        <div class="card"><strong>Countdowns:</strong> Escalating threats that resolve when a countdown reaches zero. Reactor meltdown, flooding chambers, spreading fire.</div>
+      </div>
+
+      <div class="callout callout--tip" style="margin-top:var(--space-4);">
+        <div class="callout__icon">🎯</div>
+        <div class="callout__body">
+          <p>If the environment begins driving decisions more than the fight itself, you are using it correctly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Building Encounters -->
+    <section id="building" class="rule-section">
+      <h2 class="section-title">Building Balanced Encounters</h2>
+      <p>When planning a combat encounter, begin with a pool of <strong>Battle Points</strong> equal to:</p>
+      <div style="background:var(--color-feature-bg);border:1px solid var(--color-surface-gold);border-radius:var(--radius-lg);padding:var(--space-6);text-align:center;margin:var(--space-4) 0;max-width:400px;">
+        <div style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:900;color:var(--color-text-gold);">(3 × number of Heroes) + 2</div>
+      </div>
+
+      <h3 class="section-subtitle">Adjusting Battle Points</h3>
+      <table>
+        <thead><tr><th>Adjustment</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td>−1</td><td>Quicker or easier fight</td></tr>
+          <tr><td>−2</td><td>Include two or more Nemeses</td></tr>
+          <tr><td>−2</td><td>All adversaries gain +1d4 damage (or flat +2)</td></tr>
+          <tr><td>+1</td><td>Primarily use adversaries from a lower tier</td></tr>
+          <tr><td>+1</td><td>Encounter lacks any Enforcers, Squads, Commanders, or Nemeses</td></tr>
+          <tr><td>+2</td><td>Longer, harder, or more dramatic fight</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="section-subtitle">Spending Battle Points</h3>
+      <table>
+        <thead><tr><th>Adversary Type</th><th>Cost</th></tr></thead>
+        <tbody>
+          <tr><td>Minions (one group equal to party size)</td><td>1</td></tr>
+          <tr><td>Influencers or Support Units</td><td>1</td></tr>
+          <tr><td>Standards, Skirmishers, Marksmen, Specialists, or Squads</td><td>2</td></tr>
+          <tr><td>Commanders</td><td>3</td></tr>
+          <tr><td>Enforcers</td><td>4</td></tr>
+          <tr><td>Nemeses</td><td>5</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout--tip" style="margin-top:var(--space-4);">
+        <div class="callout__icon">💡</div>
+        <div class="callout__body">
+          <div class="callout__title">Design Guidance</div>
+          <p>Most encounters shine when built with 2–3 different types, creating movement, pressure, and tactical texture. Minions and Squads establish scale. Standards and Skirmishers form the backbone. Nemeses define the encounter's narrative weight.</p>
+        </div>
+      </div>
+    </section>
+
+  </article>
+</div>
+
+<div id="site-footer-mount"></div>
+<script src="js/components.js"></script>
+</body>
+</html>
